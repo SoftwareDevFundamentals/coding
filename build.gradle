@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'checkstyle'
+    id 'org.jetbrains.kotlin.jvm'
 }
 
 group = 'bo.usfx'
@@ -12,8 +13,12 @@ repositories {
 
 dependencies {
     testImplementation group: 'org.testng', name: 'testng', version: '7.8.0'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
 }
 
 test {
     useTestNG()
+}
+kotlin {
+    jvmToolchain(21)
 }
