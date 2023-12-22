@@ -16,13 +16,13 @@ public class Task1 {
                 int y = Integer.parseInt(partes[1]);
 
                 if (x > y) {
-                    // Ganar
+
                     puntosTotales += 3;
                 } else if (x == y) {
-                    // Empate
+
                     puntosTotales += 1;
                 }
-                // No hay puntos para la pérdida, ya que se inicializa en 0 por defecto
+
             }
 
             return puntosTotales;
