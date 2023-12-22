@@ -1,7 +1,7 @@
 package bo.usfx.assignment03;
 
-public final class FootballChampionship {
-    private FootballChampionship() {
+public final class TotalPoints {
+    private TotalPoints() {
     }
     public static int points(final String[] games) {
         int totalPoints = 0;
