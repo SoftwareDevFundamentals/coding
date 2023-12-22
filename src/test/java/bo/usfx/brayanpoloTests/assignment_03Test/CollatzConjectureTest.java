@@ -9,12 +9,14 @@ public class CollatzConjectureTest {
 
     @Test
     public void test1() {
-        int expectedSumResult = 6;
-        Assert.assertEquals(CollatzConjecture.hotpo(expectedSumResult), 8);
+        int inputValue = 6;
+        int expectedValue = 8;
+        Assert.assertEquals(CollatzConjecture.hotpo(inputValue), expectedValue);
     }
     @Test
     public void test2() {
-        int expectedSumResult = 23;
-        Assert.assertEquals(CollatzConjecture.hotpo(expectedSumResult), 15);
+        int inputValue = 23;
+        int expectedValue = 15;
+        Assert.assertEquals(CollatzConjecture.hotpo(inputValue), expectedValue);
     }
 }
