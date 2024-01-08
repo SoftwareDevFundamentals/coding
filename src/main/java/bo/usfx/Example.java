@@ -2,9 +2,9 @@ package bo.usfx;
 
 import java.util.stream.IntStream;
 
-public final class ExampleTest {
+public final class Example {
 
-    private ExampleTest() {
+    private Example() {
 
     }
 
