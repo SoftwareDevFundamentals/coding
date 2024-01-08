@@ -2,7 +2,7 @@ package bo.usfx.exampletdd;
 
 public final class GrassHopper {
 
-    public GrassHopper() {
+    private GrassHopper() {
 
     }
 
