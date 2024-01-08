@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class TotalPointsTests {
 
     @Test
-    public void basicText() {
+    public void basicTextOne() {
 
         Assert.assertEquals(TotalPoints.points(new String[]
                 {"1:0", "2:0", "3:0", "4:0", "2:1", "1:3", "1:4", "2:3", "2:4", "3:4"}), 15);

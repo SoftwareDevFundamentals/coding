@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class CollatzConjectureTests {
 
     @Test
-    public void basicTest() {
+    public void basicTestOne() {
 
         Assert.assertEquals(CollatzConjecture.hotpo(23), 15);
 
