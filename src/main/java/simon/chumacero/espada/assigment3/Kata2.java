@@ -6,14 +6,7 @@ public final class Kata2 {
    * Constante de la conjetura Collatz.
    * */
   private static final int CONSTANT_3 = 3;
-  /**
-   * Constante de la conjetura Collatz.
-   * */
-  private static final int CONSTANT_1 = 1;
-  /**
-   * Constante de la conjetura Collatz.
-   * */
-  private static final int CONSTANT_2 = 2;
+
 
 
 
