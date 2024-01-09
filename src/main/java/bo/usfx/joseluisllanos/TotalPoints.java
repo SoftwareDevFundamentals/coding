@@ -9,11 +9,11 @@ public final class TotalPoints {
 
     public static int points(final String[] games) {
         return Arrays.stream(games).map(divide -> divide.split(":")).mapToInt(pair -> {
-            int x = Integer.parseInt(pair[0]);
-            int y = Integer.parseInt(pair[1]);
-            if (x > y) {
+            int teamX = Integer.parseInt(pair[0]);
+            int teamY = Integer.parseInt(pair[1]);
+            if (teamX > teamY) {
                 return 3;
-            } else if (x == y) {
+            } else if (teamX == teamY) {
                 return 1;
             } else {
                 return 0;

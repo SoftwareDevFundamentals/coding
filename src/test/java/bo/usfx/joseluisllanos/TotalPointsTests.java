@@ -7,7 +7,7 @@ public class TotalPointsTests {
     @Test
     public void test1() {
         String[] inputValue = {"2:0", "1:0", "2:1", "3:2", "1:0", "1:0", "2:1", "2:1", "3:2", "3:0"};
-        int expectedValue = 30;
+        int expectedValue = 30; 
         int currentValue = TotalPoints.points(inputValue);
 
         Assert.assertEquals(currentValue, expectedValue);
