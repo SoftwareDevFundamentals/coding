@@ -7,9 +7,9 @@ public class WellTests {
 
     @Test
     public void simpleTest() {
-        Assert.assertEquals("Fail!", Well.well(new String[]{"bad", "bad", "bad"}));
-        Assert.assertEquals("Publish!", Well.well(new String[] {"good", "bad", "bad", "bad", "bad"}));
-        Assert.assertEquals("I smell a series!", Well.well(new String[] {
-                "good", "bad", "bad", "bad", "bad", "good", "bad", "bad", "good"}));
+        Assert.assertEquals(Well.well(new String[]{"bad", "bad", "bad"}), "Fail!");
+        Assert.assertEquals(Well.well(new String[] {"good", "bad", "bad", "bad", "bad"}), "Publish!");
+        Assert.assertEquals(Well.well(new String[] {
+            "good", "bad", "bad", "bad", "bad", "good", "bad", "bad", "good"}), "I smell a series!");
     }
 }

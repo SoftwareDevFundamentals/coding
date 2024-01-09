@@ -6,6 +6,11 @@ public final class GrassHopper {
 
     }
 
+    /**
+     * Funcion que recibe un numero y devuelve la suma total.
+     * @param n numero del que se hará la suma total
+     * @return Resultado de la sumaTotal
+     * */
     public static int summation(final int n) {
         int sumaTotal = 0;
 

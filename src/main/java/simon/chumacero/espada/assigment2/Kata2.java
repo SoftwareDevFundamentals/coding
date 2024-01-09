@@ -6,6 +6,11 @@ public final class Kata2 {
 
     }
 
+    /**
+     * Realiza la suma.
+     * @param n recibe el numero que se sumará.
+     * @return  devuelve el resultado de la suma
+     * */
     public static int summation(final int n) {
         int sum = 0;
 
