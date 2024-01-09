@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class TotalPointsTests {
     @Test
     public void testVerifyThatItReturnsTheResultWithAllTheGames() {
-        String[] games = {"1:0","2:0","3:0","4:0","2:1","1:3","1:4","2:3","2:4","3:4"};
+        String[] games = {"1:0", "2:0", "3:0", "4:0", "2:1", "1:3", "1:4", "2:3", "2:4", "3:4"};
         Assert.assertEquals(15, TotalPoints.points(games));
     }
 

@@ -1,13 +1,17 @@
 package bo.usfx.luis.fernando.villca;
 
-public class CollatzConjecture {
-    public static int collatz(int n) {
+public final class CollatzConjecture {
+    private CollatzConjecture() {
+    }
+
+    public static int collatz(final int n) {
         int count = 0;
-        while (n != 1) {
-            if (n % 2 == 0) {
-                n = n / 2;
+        int number = n;
+        while (number != 1) {
+            if (number % 2 == 0) {
+                number = number / 2;
             } else {
-                n = 3 * n + 1;
+                number = 3 * number + 1;
             }
             count++;
         }

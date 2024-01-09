@@ -3,7 +3,7 @@ package bo.usfx.luis.fernando.villca;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CollatzConjectureTest {
+public class CollatzConjectureTests {
     @Test
     public void testVerifyMethodCollatzConjeture() {
         Assert.assertEquals(CollatzConjecture.collatz(1), 0);

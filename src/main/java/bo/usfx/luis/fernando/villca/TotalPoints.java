@@ -1,9 +1,12 @@
 package bo.usfx.luis.fernando.villca;
 
-public class TotalPoints {
+public final class TotalPoints {
+    private TotalPoints() {
+    }
+
     public static int points(final String[] games) {
         int totalPoints = 0;
-        for (String game: games) {
+        for (String game : games) {
             String[] result = game.split(":");
 
             if (Integer.parseInt(result[0]) > Integer.parseInt(result[1])) {
