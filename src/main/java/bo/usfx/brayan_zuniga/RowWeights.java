@@ -1,6 +1,6 @@
 package bo.usfx.brayan_zuniga;
 
-public class RowWeights {
+public final class RowWeights {
     private RowWeights() {
 
     }
