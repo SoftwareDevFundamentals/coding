@@ -22,6 +22,6 @@ public final class RowWeights {
                 teamOne += weights[i];
             }
         }
-        return new int[]{teamOne, teamTwo}; // Do your magic!
+        return new int[]{teamOne, teamTwo};
     }
 }
