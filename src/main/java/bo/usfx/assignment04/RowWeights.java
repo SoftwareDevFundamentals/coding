@@ -1,9 +1,9 @@
 package bo.usfx.assignment04;
 
-public class RowWeights {
+public final class RowWeights {
     private RowWeights() {
     }
-    public static int[] rowWeights (final int[] weights){
+    public static int[] rowWeights(final int[] weights) {
         int team1Weight = 0;
         int team2Weight = 0;
 
