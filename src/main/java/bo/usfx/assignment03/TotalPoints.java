@@ -28,3 +28,5 @@ public final class TotalPoints {
     }
 
 }
+
+
