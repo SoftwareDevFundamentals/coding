@@ -1,9 +1,14 @@
-package bo.usfx.daviniaSalguero;
+package bo.usfx.assignment03;
 
-public class Task2 {
-    public static int hotpo(int n) {
+public final class CollatzC {
+    private CollatzC() {
+
+    }
+
+    public static int hotpo(final int number) {
 
         int cont = 0;
+        int n = number;
         boolean one = false;
         while (!one) {
             if (n == 1) {

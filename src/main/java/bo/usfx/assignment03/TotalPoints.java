@@ -1,9 +1,12 @@
-package bo.usfx.daviniaSalguero;
+package bo.usfx.assignment03;
 
-public class Task1 {
+public final class TotalPoints {
 
-    public static int points(String[] games) {
-        int puntosTotales = 0;
+    private TotalPoints(){
+
+    }
+    public static int points(final String[] games) {
+        int totalPoints = 0;
 
         for (String resultado : games) {
             String[] partes = resultado.split(":");
@@ -12,15 +15,15 @@ public class Task1 {
 
             if (x > y) {
 
-                puntosTotales += 3;
+                totalPoints += 3;
             } else if (x == y) {
 
-                puntosTotales += 1;
+                totalPoints += 1;
             }
 
         }
 
-        return puntosTotales;
+        return totalPoints;
     }
 
 }
