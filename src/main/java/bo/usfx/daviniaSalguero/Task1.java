@@ -1,12 +1,7 @@
 package bo.usfx.daviniaSalguero;
 
 public class Task1 {
-        public static void main(String[] args) {
-            String[] resultados = {"3:1", "2:2", "0:1", "4:0", "1:2", "2:1", "0:0", "3:3", "1:0", "0:4"};
 
-            int puntosTotales = points(resultados);
-            System.out.println("Puntos totales del equipo: " + puntosTotales);
-        }
         public static int points(String[] games) {
             int puntosTotales = 0;
 

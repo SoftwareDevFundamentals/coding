@@ -22,11 +22,5 @@ public class Task2 {
         return cont;
     }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Introduzca un número");
-        int number = scanner.nextInt();
-        int result = hotpo(number);
-        System.out.println(result);
-    }
+
 }
