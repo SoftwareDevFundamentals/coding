@@ -1,7 +1,5 @@
 package bo.usfx.daviniaSalguero;
 
-import java.util.Scanner;
-
 public class Task2 {
     public static int hotpo(int n) {
 
