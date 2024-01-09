@@ -3,7 +3,7 @@ package bo.usfx.nicolaszelaya;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CollatzConjectureTests {
+public class CollatzConjectureTest {
     @Test
     public void tests() {
         Assert.assertEquals(CollatzConjecture.hotpo(1), 0);

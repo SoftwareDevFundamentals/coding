@@ -3,7 +3,7 @@ package bo.usfx.nicolaszelaya;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class TotalPointsTests {
+public class TotalPointsTest {
     @Test
     public void tests() {
         Assert.assertEquals(TotalPoints.points(new String[]
