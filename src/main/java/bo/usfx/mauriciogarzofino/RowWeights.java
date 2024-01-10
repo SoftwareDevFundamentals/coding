@@ -1,4 +1,4 @@
-package bo.usfx.assignment04;
+package bo.usfx.mauriciogarzofino;
 
 public final class RowWeights {
     private RowWeights() {

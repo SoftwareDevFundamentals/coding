@@ -1,4 +1,4 @@
-package bo.usfx.carlosVictoria;
+package bo.usfx.carlosvictoria;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

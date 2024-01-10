@@ -1,4 +1,4 @@
-package bo.usfx.carlosVictoria;
+package bo.usfx.carlosvictoria;
 
 public final class CollatzConjecture {
 

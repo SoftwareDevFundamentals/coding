@@ -1,4 +1,4 @@
-package bo.usfx.brayan_zuniga;
+package bo.usfx.brayanzuniga;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
