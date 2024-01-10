@@ -1,4 +1,4 @@
-package bo.usfx.assignment03;
+package bo.usfx.assignment04;
 
 public final class TotalPoints {
 

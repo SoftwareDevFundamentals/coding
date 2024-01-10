@@ -1,6 +1,6 @@
 package bo.usfx.DaviniaSalguero;
 
-import bo.usfx.assignment03.TotalPoints;
+import bo.usfx.assignment04.TotalPoints;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

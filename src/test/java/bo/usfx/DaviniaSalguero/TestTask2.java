@@ -1,6 +1,6 @@
 package bo.usfx.DaviniaSalguero;
 
-import bo.usfx.assignment03.CollatzC;
+import bo.usfx.assignment04.CollatzC;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
