@@ -1,5 +1,5 @@
 package bo.usfx.armandoTest;
-import bo.usfx.armandonuñez.Team;
+import bo.usfx.armando.Team;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 public class TeamTEst {
