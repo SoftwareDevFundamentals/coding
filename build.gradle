@@ -10,10 +10,10 @@ version = '1.0'
 repositories {
     mavenCentral()
 }
+
 dependencies {
     testImplementation group: 'org.testng', name: 'testng', version: '7.8.0'
 }
-
 
 test {
     useTestNG()
@@ -22,6 +22,7 @@ test {
 
 jacocoTestReport {
     dependsOn test
+    reports {
+        xml.required = true
+    }
 }
-
-
