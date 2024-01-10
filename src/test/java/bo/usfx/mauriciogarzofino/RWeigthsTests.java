@@ -1,4 +1,4 @@
-package bo.usfx.assignment04;
+package bo.usfx.mauriciogarzofino;
 
 import bo.usfx.mauriciogarzofino.RowWeights;
 import org.testng.Assert;

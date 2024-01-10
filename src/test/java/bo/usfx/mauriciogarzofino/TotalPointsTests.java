@@ -1,4 +1,4 @@
-package bo.usfx.assignment03;
+package bo.usfx.mauriciogarzofino;
 
 import bo.usfx.mauriciogarzofino.TotalPoints;
 import org.testng.Assert;
