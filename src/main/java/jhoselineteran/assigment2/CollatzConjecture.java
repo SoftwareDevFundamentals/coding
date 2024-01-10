@@ -1,5 +1,8 @@
 package jhoselineteran.assigment2;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * Esta clase implementa la Conjetura de Collatz
  * y proporciona un método para calcular
@@ -11,6 +14,9 @@ public final class CollatzConjecture {
    * Constante de la conjetura Collatz.
    */
   private static final int CONSTANT_3 = 3;
+
+  // Se crea un logger para la clase CollatzConjecture
+  private static final Logger logger = Logger.getLogger(CollatzConjecture.class.getName());
 
   private CollatzConjecture() {
     // Constructor privado para prevenir la instanciación de la clase.
@@ -51,9 +57,10 @@ public final class CollatzConjecture {
     final int initialValue3 = 6;
     final int initialValue4 = 23;
 
-    System.out.println(hotpo(initialValue1));
-    System.out.println(hotpo(initialValue2));
-    System.out.println(hotpo(initialValue3));
-    System.out.println(hotpo(initialValue4));
+    // Se utiliza el logger en lugar de System.out
+    logger.log(Level.INFO, String.valueOf(hotpo(initialValue1)));
+    logger.log(Level.INFO, String.valueOf(hotpo(initialValue2)));
+    logger.log(Level.INFO, String.valueOf(hotpo(initialValue3)));
+    logger.log(Level.INFO, String.valueOf(hotpo(initialValue4)));
   }
 }
