@@ -1,12 +1,13 @@
 package bo.usfx.armandonuñez;
 
-
+import java.util.logging.*;
 public class campeonato{
-
+    private static final Logger logger=Logger.getLogger(campeonato.class.getName());
 
 
 
     public static int points(String[] results) {
+
         int counter = 0;
 
         for (int i = 0; i < results.length; i++) {
@@ -23,9 +24,10 @@ public class campeonato{
 
                 indicator = "loss";
             }
-            System.out.println(("game " + (i + 1) + " results: " + results[i]+"----->"+indicator));
+            logger.info(("game " + (i + 1) + " results: " + results[i]+"----->"+indicator));
         }
         return counter;
     }
+}
 
 
