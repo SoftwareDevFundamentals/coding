@@ -59,7 +59,7 @@ public final class TotalPoints {
 
   public static void main(final String[] args) {
     final String[] games = {"3:1", "2:2", "0:1", "1:3",
-            "4:0", "2:1", "1:1", "3:2", "0:0", "2:2"};
+                            "4:0", "2:1", "1:1", "3:2", "0:0", "2:2"};
     final int pointsEarned = points(games);
     LOGGER.info(String.format("Our team earned a total of %d points.",
             pointsEarned));
