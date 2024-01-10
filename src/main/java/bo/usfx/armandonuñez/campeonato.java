@@ -21,10 +21,9 @@ public class campeonato{
                 counter += 1;  indicator = "tie";
             }
             if(x<y){
-
                 indicator = "loss";
             }
-            logger.info(("game " + (i + 1) + " results: " + results[i]+"----->"+indicator));
+            logger.info(("game "+(i + 1)+" results: "+results[i]+"----->"+indicator));
         }
         return counter;
     }
