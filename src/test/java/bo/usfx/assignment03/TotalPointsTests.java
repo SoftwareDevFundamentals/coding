@@ -1,5 +1,6 @@
 package bo.usfx.assignment03;
 
+import bo.usfx.mauriciogarzofino.TotalPoints;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

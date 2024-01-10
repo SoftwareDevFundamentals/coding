@@ -1,5 +1,6 @@
 package bo.usfx.assignment04;
 
+import bo.usfx.mauriciogarzofino.RowWeights;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

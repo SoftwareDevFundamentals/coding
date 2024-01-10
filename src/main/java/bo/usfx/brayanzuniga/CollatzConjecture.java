@@ -1,4 +1,4 @@
-package bo.usfx.brayan_zuniga;
+package bo.usfx.brayanzuniga;
 
 public final class CollatzConjecture {
     private CollatzConjecture() {
