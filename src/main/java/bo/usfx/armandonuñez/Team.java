@@ -1,6 +1,6 @@
 package bo.usfx.armandonuñez;
 
-import java.util.logging.*;
+import java.util.logging.Logger;
 public class Team {
 private static final Logger logger=Logger.getLogger(Team.class.getName());
     public static int[] rowWeights(int [] weigth ){
