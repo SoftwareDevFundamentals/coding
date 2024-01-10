@@ -1,6 +1,5 @@
-package bo.usfx.assignment03;
+package bo.usfx.mauriciogarzofino;
 
-import bo.usfx.mauriciogarzofino.CollatzC;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
