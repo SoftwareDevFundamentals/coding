@@ -1,5 +1,6 @@
 package bo.usfx;
 
+import bo.usfx.exampletdd.Example;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

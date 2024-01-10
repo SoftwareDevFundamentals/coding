@@ -1,4 +1,4 @@
-package bo.usfx;
+package bo.usfx.exampletdd;
 
 import java.util.stream.IntStream;
 
