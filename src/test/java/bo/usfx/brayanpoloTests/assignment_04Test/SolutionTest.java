@@ -23,13 +23,13 @@ public class SolutionTest {
     @Test
     public void test2() {
 
-        int[] inputValue1 = new int[] {13,27,49};
-        int[] inputValue2 = new int[] {70,58,75,34,91};
-        int[] inputValue3 = new int[] {29,83,67,53,19,28,96};
+        int[] inputValue1 = new int[] {13, 27, 49};
+        int[] inputValue2 = new int[] {70, 58, 75, 34, 91};
+        int[] inputValue3 = new int[] {29, 83, 67, 53, 19, 28, 96};
 
-        int[] expectedValue1 = new int[] {62,27};
-        int[] expectedValue2 = new int[] {236,92};
-        int[] expectedValue3 = new int[] {211,164};
+        int[] expectedValue1 = new int[] {62, 27};
+        int[] expectedValue2 = new int[] {236, 92};
+        int[] expectedValue3 = new int[] {211, 164};
 
         Assert.assertEquals(Solution.rowWeights(inputValue1), expectedValue1);
         Assert.assertEquals(Solution.rowWeights(inputValue2), expectedValue2);
