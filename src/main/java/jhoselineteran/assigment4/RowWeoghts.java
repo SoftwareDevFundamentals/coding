@@ -1,4 +1,3 @@
-
 package jhoselineteran.assigment4;
 
 /**
@@ -13,8 +12,10 @@ public final class RowWeoghts {
   /**
    * Calculate the total weights for each team.
    *
-   * @param weights An array of positive integers representing the weights of the people.
-   * @return An array of two integers, where the first one is the total weight of team 1,
+   * @param weights An array of positive
+   *                integers representing the weights of the people.
+   *@return An array of two integers, where
+   * the first one is the total weight of team 1,
    *         and the second one is the total weight of team 2.
    */
   public static int[] rowWeights(final int[] weights) {

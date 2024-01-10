@@ -3,7 +3,8 @@ package bo.usfx;
 import java.util.stream.IntStream;
 
 /**
- * The Example class provides a method for calculating the summation of numbers up to a given limit.
+ *The Example class provides a method for
+ *calculating the summation of numbers up to a given limit.
  */
 public final class Example {
 
@@ -12,7 +13,8 @@ public final class Example {
   }
 
   /**
-   * Calculates the summation of numbers from 1 to the specified limit (inclusive).
+   * Calculates the summation of numbers from 1 to
+   *the specified limit (inclusive).
    *
    * @param n The upper limit for summation.
    * @return The summation of numbers from 1 to n.

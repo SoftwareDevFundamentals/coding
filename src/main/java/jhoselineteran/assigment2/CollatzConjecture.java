@@ -1,46 +1,59 @@
 package jhoselineteran.assigment2;
 
 /**
- * Esta clase implementa la Conjetura de Collatz y proporciona un método para calcular
- * el número de pasos necesarios para llegar a 1 a partir de un número dado.
+ * Esta clase implementa la Conjetura de Collatz
+ * y proporciona un método para calcular
+ * el número de pasos necesarios para
+ * llegar a 1 a partir de un número dado.
  */
 public final class CollatzConjecture {
+  /**
+   * Constante de la conjetura Collatz.
+   */
+  private static final int CONSTANT_3 = 3;
 
   private CollatzConjecture() {
-
+    // Constructor privado para prevenir la instanciación de la clase.
   }
+
   /**
-   * Calcula el número de pasos necesarios para llegar a 1 utilizando la Conjetura de Collatz.
+   * Calcula el número de pasos necesarios
+   * para llegar a 1 utilizando la Conjetura de Collatz.
    *
-   * @param n1 El número de inicio.
+   * @param n El número de inicio.
    * @return El número de pasos necesarios.
-     */
-
-  private static int hotpo(final int n1) {
+   */
+  public static int hotpo(final int n) {
     int steps = 0;
-    int n = n1;
+    int currentNumber = n;
 
-    while (n != 1) {
-      if (n % 2 == 0) {
-        n /= 2;
+    while (currentNumber != 1) {
+      if (currentNumber % 2 == 0) {
+        currentNumber /= 2;
       } else {
-        n = 3 * n + 1;
+        currentNumber = CONSTANT_3 * currentNumber + 1;
       }
       steps++;
     }
-
     return steps;
   }
 
   /**
-   * Método principal para probar la Conjetura de Collatz con algunos valores de inicio.
+   * Método principal para probar la Conjetura
+   * de Collatz con algunos valores de inicio.
    *
-   * @param args Los argumentos de la línea de comandos (no se utilizan en este caso).
+   * @param args Los argumentos de la
+   *             línea de comandos (no se utilizan en este caso).
    */
   public static void main(final String[] args) {
-    System.out.println(hotpo(1));
-    System.out.println(hotpo(5));
-    System.out.println(hotpo(6));
-    System.out.println(hotpo(23));
+    final int initialValue1 = 1;
+    final int initialValue2 = 5;
+    final int initialValue3 = 6;
+    final int initialValue4 = 23;
+
+    System.out.println(hotpo(initialValue1));
+    System.out.println(hotpo(initialValue2));
+    System.out.println(hotpo(initialValue3));
+    System.out.println(hotpo(initialValue4));
   }
 }

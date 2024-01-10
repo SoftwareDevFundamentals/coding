@@ -12,7 +12,8 @@ public final class Well {
   }
 
   /**
-   * Determines the outcome based on the number of "good" ideas in the provided array.
+   * Determines the outcome based on the
+   *number of "good" ideas in the provided array.
    *
    * @param x An array of ideas represented as strings.
    * @return The overall outcome based on the number of "good" ideas.

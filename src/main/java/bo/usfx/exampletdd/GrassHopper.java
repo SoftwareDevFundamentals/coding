@@ -12,7 +12,8 @@ public final class GrassHopper {
   }
 
   /**
-   * Calculates the summation of numbers from 1 to the specified limit (inclusive).
+   *Calculates the summation of numbers
+   *from 1 to the specified limit (inclusive).
    *
    * @param n The upper limit for summation.
    * @return The summation of numbers from 1 to n.

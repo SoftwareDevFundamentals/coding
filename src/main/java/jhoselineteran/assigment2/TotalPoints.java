@@ -6,18 +6,28 @@ import java.util.logging.Logger;
  * The TotalPoints class provides a method to
  * calculate the total points earned by a team in a series of games.
  */
-
 public final class TotalPoints {
-  private static final Logger LOGGER = Logger.getLogger(TotalPoints.class.getName());
+  /**
+   * Logger instance for logging information.
+   */
+  private static final Logger LOGGER =
+          Logger.getLogger(TotalPoints.class.getName());
+  /**
+   * Constant representing the points awarded for a win in a game.
+   */
+
+  private static final int WIN_POINTS = 3;
 
   private TotalPoints() {
     // Constructor privado para ocultar el constructor predeterminado
   }
 
   /**
-   * Calculates the total points earned by a team based on the results of a series of games.
+   * Calculates the total points earned by
+   * a team based on the results of a series of games.
    *
-   * @param games An array of strings representing the scores of each game in the format "X:Y".
+   * @param games An array of strings representing
+   *              the scores of each game in the format "X:Y".
    * @return The total points earned by the team.
    */
 
@@ -30,7 +40,7 @@ public final class TotalPoints {
       final int opponentScore = Integer.parseInt(scores[1]);
 
       if (ourScore > opponentScore) {
-        totalPoints += 3;  // Win
+        totalPoints += WIN_POINTS;  // Win
       } else if (ourScore == opponentScore) {
         totalPoints += 1;  // Tie
       }
@@ -48,8 +58,10 @@ public final class TotalPoints {
    */
 
   public static void main(final String[] args) {
-    final String[] games = {"3:1", "2:2", "0:1", "1:3", "4:0", "2:1", "1:1", "3:2", "0:0", "2:2"};
+    final String[] games = {"3:1", "2:2", "0:1", "1:3",
+            "4:0", "2:1", "1:1", "3:2", "0:0", "2:2"};
     final int pointsEarned = points(games);
-    LOGGER.info(String.format("Our team earned a total of %d points.", pointsEarned));
+    LOGGER.info(String.format("Our team earned a total of %d points.",
+            pointsEarned));
   }
 }
