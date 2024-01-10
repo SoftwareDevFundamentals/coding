@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'checkstyle'
+    id 'jacoco'
 }
 
 group = 'bo.usfx'
@@ -16,4 +17,12 @@ dependencies {
 
 test {
     useTestNG()
+    finalizedBy jacocoTestReport
+}
+
+jacocoTestReport {
+    dependsOn test
+    reports {
+        xml.required = true
+    }
 }

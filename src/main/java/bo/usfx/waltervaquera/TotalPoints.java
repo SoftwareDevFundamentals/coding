@@ -7,7 +7,6 @@ public final class TotalPoints {
 
     public static int points(final String[] games) {
         int points = 0;
-
         for (String game : games) {
             if (game.charAt(0) > game.charAt(2)) {
                 points += 3;
@@ -15,7 +14,6 @@ public final class TotalPoints {
                 points += 1;
             }
         }
-
         return points;
     }
 }

@@ -5,11 +5,11 @@ public final class CollatzConjecture {
     private CollatzConjecture() {
     }
 
-    public static int hotpo(final int n) {
-        int num = n;
+    public static int steps(final int n) {
+        int number = n;
         int steps = 0;
-        while (num != 1) {
-            num = num % 2 == 0 ? num / 2 : 3 * num + 1;
+        while (number != 1) {
+            number = number % 2 == 0 ? number / 2 : 3 * number + 1;
             steps++;
         }
         return steps;
