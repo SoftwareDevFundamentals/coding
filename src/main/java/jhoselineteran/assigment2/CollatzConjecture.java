@@ -61,7 +61,6 @@ public final class CollatzConjecture {
    * @param args Los argumentos de la
    *             línea de comandos (no se utilizan en este caso).
    */
-  
   public static void main(final String[] args) {
     final int initialValue1 = 1;
     final int initialValue2 = 5;
