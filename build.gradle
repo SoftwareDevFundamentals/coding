@@ -19,10 +19,3 @@ test {
     useTestNG()
     finalizedBy jacocoTestReport
 }
-
-jacocoTestReport {
-    dependsOn test
-    reports {
-        xml.required = true
-    }
-}
