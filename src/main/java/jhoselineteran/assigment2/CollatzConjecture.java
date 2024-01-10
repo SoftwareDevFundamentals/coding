@@ -12,7 +12,7 @@ public final class CollatzConjecture {
   /**
    * Calcula el número de pasos necesarios para llegar a 1 utilizando la Conjetura de Collatz.
    *
-   * @param n El número de inicio.
+   * @param n1 El número de inicio.
    * @return El número de pasos necesarios.
      */
 
