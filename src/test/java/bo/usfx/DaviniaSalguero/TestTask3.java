@@ -1,6 +1,5 @@
 package bo.usfx.DaviniaSalguero;
 
-import bo.usfx.assignment04.CollatzC;
 import bo.usfx.assignment04.RowWeights;
 import org.testng.Assert;
 import org.testng.annotations.Test;
