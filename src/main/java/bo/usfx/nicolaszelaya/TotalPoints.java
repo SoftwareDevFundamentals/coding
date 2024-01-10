@@ -6,6 +6,12 @@ public final class TotalPoints {
 
     }
 
+    /**
+     * Calculates the total points based on the results of a series of games.
+     *
+     * @param games An array of strings representing the scores in the format "ourScore:opponentScore".
+     * @return The total points earned by the team.
+     */
     public static int points(final String[] games) {
         int totalScore = 0;
         for (int i = 0; i < games.length; i++) {
