@@ -16,8 +16,9 @@ public final class CollatzConjecture {
    * @return El número de pasos necesarios.
      */
 
-  private static int hotpo(int n) {
+  private static int hotpo(final int n1) {
     int steps = 0;
+    int n = n1;
 
     while (n != 1) {
       if (n % 2 == 0) {
