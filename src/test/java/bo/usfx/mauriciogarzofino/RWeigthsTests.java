@@ -1,6 +1,5 @@
 package bo.usfx.mauriciogarzofino;
 
-import bo.usfx.mauriciogarzofino.RowWeights;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
