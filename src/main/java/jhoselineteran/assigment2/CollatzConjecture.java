@@ -16,6 +16,7 @@ public final class CollatzConjecture {
   private static final int CONSTANT_3 = 3;
 
   // Se crea un logger para la clase CollatzConjecture
+
   private static final Logger logger = Logger.getLogger(CollatzConjecture.class.getName());
 
   private CollatzConjecture() {
