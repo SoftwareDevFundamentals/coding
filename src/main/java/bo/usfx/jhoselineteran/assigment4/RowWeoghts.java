@@ -1,4 +1,4 @@
-package jhoselineteran.assigment4;
+package bo.usfx.jhoselineteran.assigment4;
 
 /**
  * This class provides a solution for calculating row weights.
