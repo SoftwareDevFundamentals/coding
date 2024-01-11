@@ -85,3 +85,10 @@ System.out.println(digimon1.getName() + " battles " + digimon2.getName());
 }
 }
 ```
+
+## 6. References 
+
+https://www.codingninjas.com/studio/library/four-pillars-of-oops-in-java
+https://www.javatpoint.com/java-oops-concepts
+https://es.stackoverflow.com/questions/429515/problema-de-punteros-en-java-poo
+https://www.youtube.com/watch?v=I848HdWjLMo
