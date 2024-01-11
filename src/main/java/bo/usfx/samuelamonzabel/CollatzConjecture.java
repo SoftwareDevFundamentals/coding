@@ -4,6 +4,7 @@ public final class CollatzConjecture {
 
     private CollatzConjecture() {
     }
+
     public static int hotpo(final int n) {
         int count = 0;
         int id = n;

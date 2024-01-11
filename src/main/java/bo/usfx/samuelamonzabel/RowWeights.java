@@ -1,7 +1,9 @@
 package bo.usfx.samuelamonzabel;
+
 public final class RowWeights {
     private RowWeights() {
     }
+
     public static int[] rowWeights(final int[] weights) {
         int one = 0;
         int two = 0;
