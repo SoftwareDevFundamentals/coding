@@ -50,7 +50,7 @@ public class Digimon {
     // Constructor and methods...
 }
 ```
-## 4.Inheritance
+## 4.Herencia 
 
 La herencia permite que una clase (subclase) herede atributos y métodos
 de otra clase (superclase). Creemos una jerarquía de evolución para Digimon:
@@ -74,8 +74,7 @@ public class ChampionDigimon extends RookieDigimon {
 
 ```
 
-## 5.Polymorphism
-
+## 5.Polimorfismo
 El polimorfismo permite tratar a los objetos como instancias
 de su clase padre. Demostremos esto con un método que acepta 
 cualquier Digimon:
@@ -88,3 +87,10 @@ System.out.println(digimon1.getName() + " battles " + digimon2.getName());
 }
 }
 ```
+
+## 6 Enlaces/ Referencias 
+
+https://www.codingninjas.com/studio/library/four-pillars-of-oops-in-java
+https://www.javatpoint.com/java-oops-concepts
+https://es.stackoverflow.com/questions/429515/problema-de-punteros-en-java-poo
+https://www.youtube.com/watch?v=I848HdWjLMo
