@@ -1,1 +1,0 @@
-# Programación orientada a objetos
