@@ -73,12 +73,19 @@ public abstract class Empleado
 `Inheritance` in Java implies that a superclass or base class inherits its functions and attributes to a subclass or derived class. The reserved word that allows us to perform inheritance between classes is `extends`.
 ### inheritance types in java
 - Simple or single inheritance
+
 ![](image.png)
+
 - Multiple inheritance
+
 ![](image-1.png)
+
 - Multilevel inheritance
+
 ![](image-2.png)
+
 - Hierarchical inheritance
+
 ![](image-3.png)
 
 ## - polymorphism
@@ -108,7 +115,8 @@ Since all `Cat` and `Dog` objects are Animal objects, we can do the following
 public static void main(String[ ] args) {
   Animal a = new Dog();
   Animal b = new Cat();
-}```
+}
+```
 
 
 ## - encapsulation
@@ -131,14 +139,15 @@ class Account {
         } else
             account_balance = account_balance + a;
     }
-}```
+}
+```
 
 Suppose a hacker managed to access the code to your bank account
 
 You try to deposit an invalid amount (say -100) into your bank account by manipulating the code.
 ![ ](image-4.png)  ![ ](image-5.png)
 If a data member is `private`, it means that it can only be accessed within the same class
-![Alt text](image-6.png)
+![ ](image-6.png)
 
 ## refeneces
 
