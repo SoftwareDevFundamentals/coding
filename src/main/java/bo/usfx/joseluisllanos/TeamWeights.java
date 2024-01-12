@@ -1,5 +1,6 @@
 package bo.usfx.joseluisllanos;
 
+
 public final class TeamWeights {
     private TeamWeights() {
     }

@@ -11,3 +11,5 @@ public final class CollatzConjecture {
         return (int) Stream.iterate(n, x -> x != 1, x -> (x % 2 == 0) ? x / 2 : 3 * x + 1).count();
     }
 }
+
+
