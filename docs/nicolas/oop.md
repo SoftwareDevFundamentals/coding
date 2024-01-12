@@ -58,7 +58,7 @@ The method body, enclosed in braces `{}`, **houses the code that defines the met
 ### Example Code
 ![Screenshot of an example code of basic Inheritance](/images/inheritance/inheritanceCode.png)
 ### Output 
-> My name is Silvestre 
+> My name is Silvestre     
 > I can eat
 
 In the above example, we have derived a subclass `Dog` from superclass `Animal`. Notice the statements
@@ -69,6 +69,41 @@ In the above example, we have derived a subclass `Dog` from superclass `Animal`.
 Here, `chapa` is an object of `Dog`. However, `name` and `eat()` are the members of the `Animal` class. Since `Dog` inherits the field and method from `Animal`, we are able to access the field and method using the object of the `Dog`.
 
 # Polymorphism
+> Poly means many, and morphism means forms. We know that Water also exists in multiple states, such as Solid, Liquid, and Gas. So Water shows Polymorphism. In Java, we can achieve Polymorphism using methods. There are two types of Polymorphism  that JAVA supports.
+### Example code
+![Screenshot of an example code of basic Polymorphism](/images/polymorphism/polymorphismBaseCode.png)
+### Output
+> Rendering Square...     
+Rendering Circle...
+
+In the above example, we have created a superclass: `Polygon` and two subclasses: `Square` and `Circle`. Notice the use of the `render()` method.
+The main purpose of the `render()` method is to render the shape. However, the process of rendering a square is different than the process of rendering a circle.
+Hence, the `render()` method behaves differently in different classes. Or, we can say render`render()` is polymorphic.
+
+### Compile-time Polymorphism
+Compile-time polymorphism, also known as static or early binding, occurs when the association between an object and its functionality is determined at compile time. In Java, this is achieved through **_method overloading_**, where multiple methods in a class share the same name but have different parameter lists. During compilation, Java determines which method to call based on the method signatures, enabling the selection of the appropriate method at compile time. This is an example of compile-time polymorphism, as opposed to runtime polymorphism, which occurs dynamically during program execution.
+### Example Compile code
+![Screenshot of an example code Compile Polymorphism](/images/polymorphism/compilePolymorphismCode.png)
+### Output
+> 5     
+5.0
+
+> [!NOTE]
+> The compiler handles Compile-time Polymorphism.
+
+### Runtime polymorphism
+Runtime polymorphism, also known as dynamic or late binding, occurs when an object is associated with its functionality during runtime. In Java, this is achieved through method overriding, where a child class provides a specific implementation of a method declared in its parent class. During program execution, the Java Virtual Machine (JVM) dynamically determines the proper method to call based on the actual object type. Unlike compile-time polymorphism, which is determined at compile time, runtime polymorphism allows for flexibility in method selection during program execution. This is exemplified in situations where a child class overrides a method inherited from its parent class.
+
+### Example Runtime code
+![Screenshot of an example code Run-Time Polymorphism](/images/polymorphism/runtimePolymorphismCode.png)
+### Output
+> Method 2
+
+> [!NOTE]
+> JVM handles the runtime polymorphism.
+
+### Differences between both 
+![Screenshot of the differences between both types of compilation](/images/polymorphism/Differences.png)
 
 # Abstraction
 
