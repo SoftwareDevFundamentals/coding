@@ -5,11 +5,7 @@ public final class Well {
     private Well() {
 
     }
-    /**
-     * Realiza un conteo de las ideas para su posterior clasificacion.
-     * @param x recibe un array de strings
-     * @return  devuelve un string  con el resultado basado en el conteo
-     * */
+
     public static String well(final String[] x) {
         int buenasIdeas = 0;
 
