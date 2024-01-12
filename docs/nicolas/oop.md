@@ -28,26 +28,26 @@ The method body, enclosed in braces `{}`, **houses the code that defines the met
 1. Single Inheritance
    * In single inheritance, a single subclass extends from a single superclass.
    
-     ![Screenshot of a diagram explaining the single inheritance](/images/inheritance/singleInheritance.png)
+     ![Screenshot of a diagram explaining the single inheritance](images/Inheritance/singleInheritance.png)
 2. Multilevel  Inheritance
    * In multilevel inheritance, a subclass extends from a superclass and then the same subclass acts as a superclass for another class. For example
    
-     ![Screenshot of a diagram explaining the Multilevel inheritance](/images/inheritance/multilevelInheritance.png)
+     ![Screenshot of a diagram explaining the Multilevel inheritance](images/Inheritance/multilevelInheritance.png)
 3. Hierarchical  Inheritance
    * In hierarchical inheritance, multiple subclasses extend from a single superclass. For example
    
-     ![Screenshot of a diagram explaining the Hierarchical inheritance](/images/inheritance/hierarchicalInheritance.png)
+     ![Screenshot of a diagram explaining the Hierarchical inheritance](images/Inheritance/hierarchicalInheritance.png)
 4. Multiple  Inheritance
    * In multiple inheritance, a single subclass extends from multiple superclasses. For example
    
-     ![Screenshot of a diagram explaining the Multiple inheritance](/images/inheritance/multipleInheritance.png)
+     ![Screenshot of a diagram explaining the Multiple inheritance](images/Inheritance/multipleInheritance.png)
 > [!NOTE]
 > Java doesn't support multiple inheritance. However, we can achieve multiple inheritance using interfaces.
 
 5. Hybrid  Inheritance
    * Hybrid inheritance is a combination of two or more types of inheritance. For example
    
-     ![Screenshot of a diagram explaining the Hybrid inheritance](/images/inheritance/hybridInheritance.png)
+     ![Screenshot of a diagram explaining the Hybrid inheritance](images/Inheritance/hybridInheritance.png)
 > Here, we have combined hierarchical and multiple inheritance to form a hybrid inheritance.
 
 ### Advantages of Inheritance
@@ -56,7 +56,7 @@ The method body, enclosed in braces `{}`, **houses the code that defines the met
 ### Disadvantages of Inheritance
 * The child class and the parent class are tightly coupled. Any changes in the parent class equally affect all the child classes.
 ### Example Code
-![Screenshot of an example code of basic Inheritance](/images/inheritance/inheritanceCode.png)
+![Screenshot of an example code of basic Inheritance](images/Inheritance/inheritanceCode.png)
 ### Output 
 > My name is Silvestre     
 > I can eat
@@ -71,7 +71,7 @@ Here, `chapa` is an object of `Dog`. However, `name` and `eat()` are the members
 # Polymorphism
 > Poly means many, and morphism means forms. We know that Water also exists in multiple states, such as Solid, Liquid, and Gas. So Water shows Polymorphism. In Java, we can achieve Polymorphism using methods. There are two types of Polymorphism  that JAVA supports.
 ### Example code
-![Screenshot of an example code of basic Polymorphism](/images/polymorphism/polymorphismBaseCode.png)
+![Screenshot of an example code of basic Polymorphism](images/Polymorphism/polymorphismBaseCode.png)
 ### Output
 > Rendering Square...     
 Rendering Circle...
@@ -83,7 +83,7 @@ Hence, the `render()` method behaves differently in different classes. Or, we ca
 ### Compile-time Polymorphism
 Compile-time polymorphism, also known as static or early binding, occurs when the association between an object and its functionality is determined at compile time. In Java, this is achieved through **_method overloading_**, where multiple methods in a class share the same name but have different parameter lists. During compilation, Java determines which method to call based on the method signatures, enabling the selection of the appropriate method at compile time. This is an example of compile-time polymorphism, as opposed to runtime polymorphism, which occurs dynamically during program execution.
 ### Example Compile code
-![Screenshot of an example code Compile Polymorphism](/images/polymorphism/compilePolymorphismCode.png)
+![Screenshot of an example code Compile Polymorphism](images/Polymorphism/compilePolymorphismCode.png)
 ### Output
 > 5     
 5.0
@@ -95,7 +95,7 @@ Compile-time polymorphism, also known as static or early binding, occurs when th
 Runtime polymorphism, also known as dynamic or late binding, occurs when an object is associated with its functionality during runtime. In Java, this is achieved through method overriding, where a child class provides a specific implementation of a method declared in its parent class. During program execution, the Java Virtual Machine (JVM) dynamically determines the proper method to call based on the actual object type. Unlike compile-time polymorphism, which is determined at compile time, runtime polymorphism allows for flexibility in method selection during program execution. This is exemplified in situations where a child class overrides a method inherited from its parent class.
 
 ### Example Runtime code
-![Screenshot of an example code Run-Time Polymorphism](/images/polymorphism/runtimePolymorphismCode.png)
+![Screenshot of an example code Run-Time Polymorphism](images/Polymorphism/runtimePolymorphismCode.png)
 ### Output
 > Method 2
 
@@ -103,7 +103,7 @@ Runtime polymorphism, also known as dynamic or late binding, occurs when an obje
 > JVM handles the runtime polymorphism.
 
 ### Differences between both 
-![Screenshot of the differences between both types of compilation](/images/polymorphism/Differences.png)
+![Screenshot of the differences between both types of compilation](images/Polymorphism/Differences.png)
 
 
 
@@ -136,9 +136,9 @@ Consider a real-life example of a man driving a car. The man only knows that pre
 
 ### When to use abstract classes and abstract methods?
 In certain scenarios, it is **beneficial to create a superclass that outlines the structure of an abstraction without providing a _complete implementation_ of each method**. This approach allows for the definition of a generalization form in the superclass, shared by all subclasses, leaving it to each subclass to provide specific details. Using the example of shapes in a computer-aided design or game simulation, a base type "shape" may have common attributes like color and size, with specific shapes such as circle, square, and triangle inheriting from it. Each subclass can add additional characteristics and behaviors, showcasing a type hierarchy that captures both similarities and differences among
-![Screenshot of explanation of abstract methods](/images/Abstraction/chart1.png)
+![Screenshot of explanation of abstract methods](images/Abstraction/chart1.png)
 ### Code Example
-![Screenshot of explanation of abstract methods](/images/Abstraction/abstractionCode1.png)
+![Screenshot of explanation of abstract methods](images/Abstraction/abstractionCode1.png)
 ### Output
 > Shape constructor called    
 Circle constructor called    
@@ -151,7 +151,7 @@ Rectangle color is Yellowand area is : 8.0
 Interfaces in Java provide a method for implementing abstraction, and a key distinction is their **ability to achieve 100% abstraction _in Java classes_**. Unlike classes, interfaces include methods and variables without method bodies. Additionally, interfaces can be utilized for **implementing multiple interfaces in Java, extending their _utility_ beyond abstraction**.
 > Implementation: To implement an interface we use the keyword “implements” with class.
 ### Code Example
-![Screenshot of explanation of abstract methods](/images/Abstraction/abstractionCode2.png)
+![Screenshot of explanation of abstract methods](images/Abstraction/abstractionCode2.png)
 ### Advantages of Abstraction
 * It reduces the complexity of **viewing things**.
 * Avoids **code duplication** and increases reusability.
@@ -181,7 +181,7 @@ Encapsulation in Java, a fundamental concept in object-oriented programming (OOP
 In Java, encapsulation is realized by declaring instance variables as `private`, restricting direct access from outside the class. To enable external interaction with these variables, `public` methods, known as `getters` and `setters`, are implemented. `Getters` retrieve values, while `setters` modify them. This approach **allows the class to _enforce data validation rules_ and _maintain the consistency of its internal state_**, ensuring controlled and secure access to its attributes.
 
 ### Code Example
-![Screenshot of explanation of abstract methods](/images/Encapsulation/encapsulationCode1.png)
+![Screenshot of explanation of abstract methods](images/Encapsulation/encapsulationCode1.png)
 ### Output
 > Name: John    
 Age: 30
@@ -207,17 +207,16 @@ Age: 30
 * May limit the flexibility of the implementation.
 
 ### Code Example 2
-![Screenshot of explanation of abstract methods](/images/Encapsulation/encapsulationCode2.png)
+![Screenshot of explanation of abstract methods](images/Encapsulation/encapsulationCode2.png)
 
 ### Output
 > 90482098491 ABC abc@gmail.com 100000.0
 
 ## Sources
-This documentation was built using information from the present sources[^1]
+This documentation was built using information from the present sources
 * [Coding ninjas](https://www.codingninjas.com/studio/library/four-pillars-of-oops-in-java).
 * [Programiz](https://www.programiz.com/java-programming/inheritance).
 * [Geeks for Geeks (Source 1)](https://www.geeksforgeeks.org/difference-between-compile-time-and-run-time-polymorphism-in-java/).
 * [Geeks for Geeks (Source 2)](https://www.geeksforgeeks.org/abstraction-in-java-2/).
 * [Geeks for Geeks (Source 3)](https://www.geeksforgeeks.org/encapsulation-in-java/).
 
-[^1] All rights reserved, information used for academic purposes
