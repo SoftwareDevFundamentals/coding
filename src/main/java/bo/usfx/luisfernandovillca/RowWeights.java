@@ -1,4 +1,4 @@
-package bo.usfx.luis.fernando.villca;
+package bo.usfx.luisfernandovillca;
 
 public final class RowWeights {
     private RowWeights() {

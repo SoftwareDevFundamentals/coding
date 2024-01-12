@@ -1,4 +1,4 @@
-package bo.usfx.luis.fernando.villca;
+package bo.usfx.luisfernandovillca;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
