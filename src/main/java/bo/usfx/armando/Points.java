@@ -19,9 +19,8 @@ public final class Points {
                 counter += 1;
             }
             if(x<y){
-                counter+=0;
+                counter +=0;
             }
-
         }
         return counter;
     }

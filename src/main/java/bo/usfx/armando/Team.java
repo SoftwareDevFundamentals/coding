@@ -5,7 +5,6 @@ package bo.usfx.armando;
 public final class Team {
     private Team() {
     }
-
     public static int[] rowWeights(final int[] e) {
         int counterTeam1 = 0;
         int counterTeam2 = 0;
