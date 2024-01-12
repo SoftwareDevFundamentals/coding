@@ -6,22 +6,22 @@ import org.testng.annotations.Test;
 public class RowWeightsTests {
     @Test
     public void basicTests() {
-        Assert.assertEquals(new int[]{80, 0}, RowWeights.rowWeights(new int[]{80}));
-        Assert.assertEquals(new int[]{100, 50}, RowWeights.rowWeights(new int[]{100, 50}));
-        Assert.assertEquals(new int[]{120, 140}, RowWeights.rowWeights(new int[]{50, 60, 70, 80}));
+        Assert.assertEquals(RowWeights.rowWeights(new int[]{80}), new int[]{80, 0});
+        Assert.assertEquals(RowWeights.rowWeights(new int[]{100, 50}), new int[]{100, 50});
+        Assert.assertEquals(RowWeights.rowWeights(new int[]{50, 60, 70, 80}), new int[]{120, 140});
     }
 
     @Test
     public void oddVectorLength() {
-        Assert.assertEquals(new int[]{62, 27}, RowWeights.rowWeights(new int[]{13, 27, 49}));
-        Assert.assertEquals(new int[]{236, 92}, RowWeights.rowWeights(new int[]{70, 58, 75, 34, 91}));
-        Assert.assertEquals(new int[]{211, 164}, RowWeights.rowWeights(new int[]{29, 83, 67, 53, 19, 28, 96}));
+        Assert.assertEquals(RowWeights.rowWeights(new int[]{13, 27, 49}), new int[]{62, 27});
+        Assert.assertEquals(RowWeights.rowWeights(new int[]{70, 58, 75, 34, 91}), new int[]{236, 92});
+        Assert.assertEquals(RowWeights.rowWeights(new int[]{29, 83, 67, 53, 19, 28, 96}), new int[]{211, 164});
     }
 
     @Test
     public void evenVectorLength() {
-        Assert.assertEquals(new int[]{100, 50}, RowWeights.rowWeights(new int[]{100, 50}));
-        Assert.assertEquals(new int[]{150, 151}, RowWeights.rowWeights(new int[]{100, 51, 50, 100}));
-        Assert.assertEquals(new int[]{207, 235}, RowWeights.rowWeights(new int[]{39, 84, 74, 18, 59, 72, 35, 61}));
+        Assert.assertEquals(RowWeights.rowWeights(new int[]{100, 50}), new int[]{100, 50});
+        Assert.assertEquals(RowWeights.rowWeights(new int[]{100, 51, 50, 100}), new int[]{150, 151});
+        Assert.assertEquals(RowWeights.rowWeights(new int[]{39, 84, 74, 18, 59, 72, 35, 61}), new int[]{207, 235});
     }
 }
