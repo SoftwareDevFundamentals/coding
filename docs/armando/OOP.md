@@ -146,7 +146,9 @@ Suppose a hacker managed to access the code to your bank account
 
 You try to deposit an invalid amount (say -100) into your bank account by manipulating the code.
 ![ ](image-4.png)  ![ ](image-5.png)
+
 If a data member is `private`, it means that it can only be accessed within the same class
+
 ![ ](image-6.png)
 
 ## refeneces
