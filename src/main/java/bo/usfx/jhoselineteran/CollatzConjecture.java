@@ -1,7 +1,5 @@
 package bo.usfx.jhoselineteran;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  * Esta clase implementa la Conjetura de Collatz
@@ -19,9 +17,6 @@ public final class CollatzConjecture {
    * Logger para la clase CollatzConjecture.
    * Se utiliza para registrar mensajes y eventos.
    */
-  public static final Logger LOGGER =
-          Logger.getLogger(CollatzConjecture.class.getName());
-
  private CollatzConjecture() {
     // Constructor privado para prevenir la instanciación de la clase.
   }
@@ -48,9 +43,6 @@ public final class CollatzConjecture {
 
     // Se utiliza format specifiers en lugar de concatenación
     // Se utiliza format specifiers en lugar de concatenación
-    LOGGER.log(Level.INFO, "Número de pasos para llegar a 1 desde {}: {}",
-            new Object[]{n, steps});
-
     return steps;
   }
 

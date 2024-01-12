@@ -1,17 +1,13 @@
 package bo.usfx.jhoselineteran;
 
-import java.util.logging.Logger;
+
 
 /**
  * The TotalPoints class provides a method to
  * calculate the total points earned by a team in a series of games.
  */
 public final class TotalPoints {
-  /**
-   * Logger instance for logging information.
-   */
-  private static final Logger LOGGER =
-          Logger.getLogger(TotalPoints.class.getName());
+
   /**
    * Constant representing the points awarded for a win in a game.
    */
@@ -19,9 +15,7 @@ public final class TotalPoints {
   private static final int WIN_POINTS = 3;
 
   private TotalPoints() {
-    // Constructor privado para ocultar el constructor predeterminado
   }
-
   /**
    * Calculates the total points earned by
    * a team based on the results of a series of games.
@@ -44,22 +38,8 @@ public final class TotalPoints {
       } else if (ourScore == opponentScore) {
         totalPoints += 1;  // Tie
       }
-      // No need to add points for a loss (0 points)
+      // No need to add points for a loss (total 0 points)
     }
     return totalPoints;
-  }
-  /**
-   * The main method demonstrates the usage of the TotalPoints
-   * class by calculating points earned in a predefined set of games.
-   *
-   * @param args Command line arguments (not used in this context).
-   */
-
-  public static void main(final String[] args) {
-    final String[] games = {"3:1", "2:2", "0:1", "1:3",
-            "4:0", "2:1", "1:1", "3:2", "0:0", "2:2"};
-    final int pointsEarned = points(games);
-    LOGGER.info(String.format("Our team earned a total of %d points.",
-            pointsEarned));
   }
 }
