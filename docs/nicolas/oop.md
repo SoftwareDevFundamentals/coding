@@ -103,7 +103,7 @@ Runtime polymorphism, also known as dynamic or late binding, occurs when an obje
 > JVM handles the runtime polymorphism.
 
 ### Differences between both 
-![Screenshot of the differences between both types of compilation](images/Polymorphism/Differences.png)
+![Screenshot of the differences between both types of compilation](images/Polymorphism/DIfferences.png)
 
 
 
