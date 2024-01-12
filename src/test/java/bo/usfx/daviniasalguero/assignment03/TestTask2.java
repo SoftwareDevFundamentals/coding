@@ -1,4 +1,4 @@
-package bo.usfx.daviniasalguero;
+package bo.usfx.daviniasalguero.assignment03;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

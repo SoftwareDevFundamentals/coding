@@ -1,4 +1,4 @@
-package bo.usfx.daviniasalguero;
+package bo.usfx.daviniasalguero.assignment03;
 
 public final class CollatzC {
     private CollatzC() {
