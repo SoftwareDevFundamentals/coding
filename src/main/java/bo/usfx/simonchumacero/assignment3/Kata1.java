@@ -1,24 +1,25 @@
-package simon.chumacero.espada.assigment3;
+package bo.usfx.simonchumacero.assignment3;
 
 public final class Kata1 {
   /**
-   * Puntos otorgados por una victoria.
-   * */
+   * Points awarded for a victory.
+   */
   private static final int WIN_POINTS = 3;
 
   /**
-   * Puntos otorgados por un empate.
-   * */
+   * Points awarded for a tie.
+   */
   private static final int TIE_POINTS = 1;
 
   private Kata1() {
   }
 
   /**
-   * Recibe un String con el marcador de los juegos.
-   * @param games un string con el puntaje o marcador de los juegos
-   * @return entero con el resultado de total de puntos
-   * */
+   * Receives a String with the score of the games.
+   *
+   * @param games a string with the score or result of the games
+   * @return an integer with the total points result
+   */
   public static int points(final String[] games) {
     int totalPoints = 0;
 

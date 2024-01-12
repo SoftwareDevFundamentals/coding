@@ -1,12 +1,15 @@
-package simon.chumacero.espada.assigment4;
+package bo.usfx.simonchumacero.assignment4;
 
 public final class Kata1 {
   private Kata1() {
   }
+
   /**
-   * Funcion que recibe un array de enteros y los clasifica.
-   * @param weights array de enteros
-   * @return  array de enteros ordenados*/
+   * Function that receives an array of integers and classifies them.
+   *
+   * @param weights array of integers
+   * @return array of sorted integers
+   */
   public static int[] rowWeights(final int[] weights) {
     int team1Weight = 0;
     int team2Weight = 0;
