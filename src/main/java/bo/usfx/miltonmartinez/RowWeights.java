@@ -1,15 +1,18 @@
 package bo.usfx.miltonmartinez;
 
-public class RowWeights {
+public final class RowWeights {
 
-    public static int[] rowWeights (final int[] weights) {
+    private RowWeights() {}
+
+    public static int[] rowWeights(final int[] weights) {
         int team1Weight = 0, team2Weight = 0;
 
         for (int i = 0; i < weights.length; i++) {
-            if (i % 2 == 0)
+            if (i % 2 == 0) {
                 team1Weight += weights[i];
-            else
+            } else {
                 team2Weight += weights[i];
+            }
         }
         return new int[] {team1Weight, team2Weight};
     }

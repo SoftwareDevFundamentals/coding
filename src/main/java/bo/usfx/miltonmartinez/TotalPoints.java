@@ -1,8 +1,9 @@
 package bo.usfx.miltonmartinez;
 
-public class TotalPoints {
+public final class TotalPoints {
 
-    public static int points(String[] games) {
+    private TotalPoints() {}
+    public static int points(final String[] games) {
         int totalPoints = 0;
 
         for (String matchResult : games) {
@@ -12,7 +13,7 @@ public class TotalPoints {
 
             if (ourScore > opponentScore) {
                 totalPoints += 3;
-            } else if (ourScore == opponentScore){
+            } else if (ourScore == opponentScore) {
                 totalPoints += 1;
             }
         }

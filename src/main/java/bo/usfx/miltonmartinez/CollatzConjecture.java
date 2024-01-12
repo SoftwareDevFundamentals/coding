@@ -1,8 +1,12 @@
 package bo.usfx.miltonmartinez;
 
-public class CollatzConjecture {
+public final class CollatzConjecture {
 
-    public static int hotpo(int n){
+    private CollatzConjecture() {}
+
+    public static int hotpo(final int initialN) {
+
+        int n = initialN;
         int count = 0;
 
         while (n != 1) {
