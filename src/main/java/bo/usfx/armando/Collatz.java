@@ -1,11 +1,11 @@
 package bo.usfx.armando;
 
 public final class Collatz {
-    private Collatz(){}
+    private Collatz() { }
 
     public static int hotpo(final int n) {
-        int number=n;
-        int count=0;
+        int number = n;
+        int count = 0;
 
         while (number != 1) {
             if (number % 2 == 0) {

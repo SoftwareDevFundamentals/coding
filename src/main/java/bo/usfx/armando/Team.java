@@ -16,6 +16,6 @@ public final class Team {
                 counterTeam2 += e[i];
             }
         }
-        return new int[] { counterTeam1, counterTeam2 };
+        return new int[] {counterTeam1, counterTeam2};
     }
 }
