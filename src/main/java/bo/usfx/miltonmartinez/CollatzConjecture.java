@@ -2,7 +2,9 @@ package bo.usfx.miltonmartinez;
 
 public final class CollatzConjecture {
 
-    private CollatzConjecture() {}
+    private CollatzConjecture() {
+
+    }
 
     public static int hotpo(final int initialN) {
 

@@ -2,7 +2,9 @@ package bo.usfx.miltonmartinez;
 
 public final class TotalPoints {
 
-    private TotalPoints() {}
+    private TotalPoints() {
+
+    }
     public static int points(final String[] games) {
         int totalPoints = 0;
 

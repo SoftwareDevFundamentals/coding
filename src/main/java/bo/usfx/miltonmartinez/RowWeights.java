@@ -2,7 +2,9 @@ package bo.usfx.miltonmartinez;
 
 public final class RowWeights {
 
-    private RowWeights() {}
+    private RowWeights() {
+
+    }
 
     public static int[] rowWeights(final int[] weights) {
         int team1Weight = 0, team2Weight = 0;
