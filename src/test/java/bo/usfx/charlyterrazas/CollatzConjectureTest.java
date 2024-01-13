@@ -1,12 +1,11 @@
-package bo.usfx.miltonmartinez;
-
+package bo.usfx.charlyterrazas;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CollatzConjectureTests {
+public class CollatzConjectureTest {
 
     @Test
-    void sampleTests(){
+    public void testHotpo() {
         Assert.assertEquals(CollatzConjecture.hotpo(1), 0);
         Assert.assertEquals(CollatzConjecture.hotpo(5), 5);
         Assert.assertEquals(CollatzConjecture.hotpo(6), 8);

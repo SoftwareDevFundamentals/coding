@@ -1,8 +1,9 @@
 package bo.usfx.charlyterrazas;
 
 public final class TotalPoints {
-    private TotalPoints(){
+    private TotalPoints() {
     }
+
     public static int calculateTotalPoints(final String[] matchResults) {
         int totalPoints = 0;
         for (String matchResult : matchResults) {
