@@ -18,7 +18,6 @@ public final class CollatzConjecture {
                 temp = temp * 3 + 1;
             }
         }
-
         return steps;
     }
 }
