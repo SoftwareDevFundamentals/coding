@@ -1,6 +1,5 @@
 package bo.usfx.jhoselineteran;
 
-
 /**
  * Esta clase implementa la Conjetura de Collatz
  * y proporciona un método para calcular
@@ -17,7 +16,7 @@ public final class CollatzConjecture {
    * Logger para la clase CollatzConjecture.
    * Se utiliza para registrar mensajes y eventos.
    */
- private CollatzConjecture() {
+  private CollatzConjecture() {
     // Constructor privado para prevenir la instanciación de la clase.
   }
 
@@ -40,28 +39,8 @@ public final class CollatzConjecture {
       }
       steps++;
     }
-
-    // Se utiliza format specifiers en lugar de concatenación
     // Se utiliza format specifiers en lugar de concatenación
     return steps;
   }
-
-  /**
-   * Método principal para probar la Conjetura
-   * de Collatz con algunos valores de inicio.
-   *
-   * @param args Los argumentos de la
-   *             línea de comandos (no se utilizan en este caso).
-   */
-  public static void main(final String[] args) {
-    final int initialValue1 = 1;
-    final int initialValue2 = 5;
-    final int initialValue3 = 6;
-    final int initialValue4 = 23;
-
-    hotpo(initialValue1);
-    hotpo(initialValue2);
-    hotpo(initialValue3);
-    hotpo(initialValue4);
-  }
 }
+
