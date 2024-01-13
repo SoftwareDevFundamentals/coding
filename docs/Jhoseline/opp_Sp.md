@@ -2,10 +2,11 @@
 
 ## Introducción
 
-La Programación Orientada a Objetos (POO) es un paradigma de programación 
-centrado en el concepto de "objetos", los cuales pueden contener datos en 
+La Programación Orientada a Objetos (POO) es un paradigma de programación
+centrado en el concepto de "objetos", los cuales pueden contener datos en
 forma de atributos y código en forma de procedimientos (métodos). Java,
 un lenguaje de programación popular, respalda fuertemente los principios de la POO.
+
 
 ## 1. Clases y Objetos
 
@@ -38,10 +39,11 @@ Digimon gabumon = new Digimon("Gabumon", "Bestia");
 
 ## 2. Encapsulamiento
 
-El encapsulamiento es un concepto clave en la POO que implica agrupar los datos 
+El encapsulamiento es un concepto clave en la POO que implica agrupar los datos
 (atributos) y los métodos que operan en los datos dentro de una unidad única
 (una clase). En nuestra clase Digimon, los atributos nombre
 y tipo están encapsulados:
+
 ```java
 public class Digimon {
     private String name;
@@ -50,7 +52,8 @@ public class Digimon {
     // Constructor and methods...
 }
 ```
-## 4.Herencia 
+
+## 4.Herencia
 
 La herencia permite que una clase (subclase) herede atributos y métodos
 de otra clase (superclase). Creemos una jerarquía de evolución para Digimon:
@@ -75,8 +78,9 @@ public class ChampionDigimon extends RookieDigimon {
 ```
 
 ## 5.Polimorfismo
+
 El polimorfismo permite tratar a los objetos como instancias
-de su clase padre. Demostremos esto con un método que acepta 
+de su clase padre. Demostremos esto con un método que acepta
 cualquier Digimon:
 
 ```java
@@ -88,7 +92,7 @@ System.out.println(digimon1.getName() + " battles " + digimon2.getName());
 }
 ```
 
-## 6 Enlaces/ Referencias 
+## 6 Enlaces/ Referencias
 
 https://www.codingninjas.com/studio/library/four-pillars-of-oops-in-java
 https://www.javatpoint.com/java-oops-concepts

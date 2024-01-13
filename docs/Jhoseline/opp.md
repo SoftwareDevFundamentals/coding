@@ -1,9 +1,17 @@
 # Object-Oriented Programming (OOP)
 
+## **Table of Contents**
+
+1. [Introduction](#1Introduction)
+2. [Classes and Objects](#2classes-and-objects)
+3. [Encapsulation](#3encapsulation)
+4. [Inheritance](#4inheritance)
+5. [Polymorphism](#5polymorphism)
+6. [References](#6-references)
 ## 1.Introduction
 
 Object-Oriented Programming (OOP) is a programming paradigm centered around the concept of "objects,
-which can contain data in the form of fields (attributes) and code in the form of procedures (methods). 
+which can contain data in the form of fields (attributes) and code in the form of procedures (methods).
 Java, a popular programming language, strongly supports OOP principles.
 
 ## 2.Classes and Objects
@@ -48,9 +56,10 @@ public class Digimon {
     // Constructor and methods...
 }
 ```
+
 ## 4.Inheritance
 
-Inheritance allows a class (subclass) to inherit attributes and methods 
+Inheritance allows a class (subclass) to inherit attributes and methods
 from another class (superclass). Let's create an evolution hierarchy for Digimon:
 
 ```java
@@ -74,7 +83,7 @@ public class ChampionDigimon extends RookieDigimon {
 
 ## 5.Polymorphism
 
-Polymorphism allows objects to be treated as instances of their parent class. 
+Polymorphism allows objects to be treated as instances of their parent class.
 Let's demonstrate this with a method that accepts any Digimon:
 
 ```java
@@ -86,7 +95,7 @@ System.out.println(digimon1.getName() + " battles " + digimon2.getName());
 }
 ```
 
-## 6. References 
+## 6. References
 
 https://www.codingninjas.com/studio/library/four-pillars-of-oops-in-java
 https://www.javatpoint.com/java-oops-concepts
