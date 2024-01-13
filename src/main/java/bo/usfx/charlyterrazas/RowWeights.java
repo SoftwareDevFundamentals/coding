@@ -5,7 +5,7 @@ public final class RowWeights {
     private RowWeights() {
     }
 
-    public static int[] calculateTeamWeights(final int[] weights) {
+    public static int[] calTeamWeights(final int[] weights) {
         int totalWeightTeam1 = 0;
         int totalWeightTeam2 = 0;
         int i = 0;
