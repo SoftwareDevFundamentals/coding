@@ -1,6 +1,5 @@
-package bo.usfx.simonchumaceroTests.assignment4;
+package bo.usfx.simonchumacero.assignment4;
 
-import bo.usfx.simonchumacero.assignment4.Kata1;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

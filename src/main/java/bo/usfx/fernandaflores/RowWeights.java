@@ -1,4 +1,4 @@
-package bo.usfx.fernanda_flores;
+package bo.usfx.fernandaflores;
 
 public final class RowWeights {
     private RowWeights() {
