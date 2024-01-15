@@ -1,4 +1,4 @@
-package bo.usfx.fernanda_flores;
+package bo.usfx.fernandaflores;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 public class RowWeightsTests {

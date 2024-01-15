@@ -1,8 +1,7 @@
-package bo.usfx.simonchumaceroTests.assignment3;
+package bo.usfx.simonchumacero.assignment3;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import bo.usfx.simonchumacero.assignment3.Kata1;
 
 public class Kata1Test {
 
