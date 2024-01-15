@@ -1,6 +1,8 @@
 # Object-Oriented Programming (OOP) Pillars
 Object-Oriented Programming (OOP) is a programming paradigm that relies on the concept of "objects" to organize and structure code. Instead of focusing on procedures or functions, OOP centers around the interaction between objects, which are instances of classes.
 
+![](C:\Users\GAMING\IdeaProjects\coding\docs\davinia\Images\opp.png)
+
 OOP is based on four fundamental concepts:
 
 
