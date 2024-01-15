@@ -1,210 +1,225 @@
 
-# Principios de la Programacion orientada a objetos:
+# Object-Oriented Programming Principles:
+There are numerous principles in object-oriented programming, such as classes and objects. However, in software development using this paradigm, four fundamental principles are the cornerstone of the development process. These four principles, which we will explore below, are referred to as the foundations of object-oriented programming.
 
-Existen numerosos principios en programación orientada a objetos, tales como clases y objetos. No obstante, en el desarrollo de software utilizando este paradigma, se encuentran cuatro principios fundamentales que constituyen los cimientos del proceso de desarrollo. A estos cuatro principios, que exploraremos a continuación, les denominamos los fundamentos de la programación orientada a objetos.
+This does not imply that there are no other equally important ideas outside of these foundations, but these four pillars represent the basis for more advanced concepts, making understanding them crucial.
 
-Esto no implica que no existan otras ideas igualmente importantes fuera de estos fundamentos, pero estos cuatro pilares representan la base de conceptos más avanzados, por lo que comprenderlos resulta crucial.
+These foundations are: abstraction, encapsulation, inheritance, and polymorphism.
 
-Estos fundamentos son: abstracción, encapsulamiento, herencia y polimorfismo.
-
-Nota: Por comodidad de referencia, incluyo aquí la clase que creamos en la entrada anterior:
+Note: For reference, I include here the class we created in the previous entry:
 
 
-public class Carro
-
+>public class Car
 {
+public string Brand;
+public int YearReleasedToMarket { get; set; }
+    public void Accelerate()
+    {
 
-    public string Marca;
- 
-    public int AñoSalidaAlMercado { get; set; }
- 
-    public void Acelerar()
+    }
+>}
+
+## Abstraction:
+
+According to the Royal Spanish Academy (RAE), one of the meanings of abstraction is as follows:
+
+"To disregard something, or set it aside." And it provides the following example: "Let's focus on the essential, abstracting FROM marginal considerations."
+
+This example encapsulates the essence of the abstraction concept. When performing abstraction, we seek to overlook details that are not necessary for us and display only what is relevant.
+
+From the perspective of software development, we can see that through a class, we can carry out an abstraction of an entity from the real world. Take, for example, the "Car" class we created. It has the ability to store data related to the brand and the year a car was released to the market. However, why only these two pieces of information? A real-world car has more properties, such as color and model. However, we must question: Are these pieces of information relevant to our software?
+
+Our class abstracts everything that represents a car, selecting only what interests us and discarding everything else.
+
+## Encapsulation
+
+Now, we use classes to model entities relevant to your application, store data within objects, and execute functionalities. However, the question that arises is: Should anyone be able to directly modify this data? Should anyone execute any functionality of our objects at any time? Generally, this is not something we desire. We want to have control over how data is assigned, decide who can view the internal information of our objects, and perhaps regulate the execution of object functionalities. This is where the concept of encapsulation comes into play.
+
+Encapsulation allows us to control who can view and use the various internal modules of our system. In terms of classes, encapsulation defines access to the members of the class.
+
+In C#, we can use access modifiers to specify control over external agents on different parts of our system, such as classes, class members, interfaces, among others. Suppose we have a variable called "speed," which we want to include in our "Car" class to indicate the speed at which a particular vehicle is moving. However, we only want the value of this variable to be visible and modifiable within the class. This can be achieved using a field or a property. Let's choose to do it with a property:
+
+
+
+>public class Car
+{
+public string Brand;
+public int YearReleasedToMarket { get; set; }
+private int Speed { get; set; }
+
+    public void Accelerate()
+    {
+        Speed += 10;
+    }
+>}
+
+
+
+Object-Oriented Programming Principles:
+There are numerous principles in object-oriented programming, such as classes and objects. However, in software development using this paradigm, four fundamental principles are the cornerstone of the development process. These four principles, which we will explore below, are referred to as the foundations of object-oriented programming.
+
+This does not imply that there are no other equally important ideas outside of these foundations, but these four pillars represent the basis for more advanced concepts, making understanding them crucial.
+
+These foundations are: abstraction, encapsulation, inheritance, and polymorphism.
+
+Note: For reference, I include here the class we created in the previous entry:
+
+
+>public class Car
+{
+public string Brand;
+public int YearReleasedToMarket { get; set; }
+
+    public void Accelerate()
     {
     }
-}
-## Abstracion:
+>}
 
-Según la Real Academia Española (RAE), una de las acepciones de abstraer es la siguiente:
+Abstraction:
+According to the Royal Spanish Academy (RAE), one of the meanings of abstraction is as follows:
 
-"Hacer caso omiso de algo, o dejarlo a un lado." Y proporciona el siguiente ejemplo: "Centremos la atención en lo esencial abstrayendo DE consideraciones marginales."
+"To disregard something, or set it aside." And it provides the following example: "Let's focus on the essential, abstracting FROM marginal considerations."
 
-Este ejemplo encapsula la esencia del concepto de abstraer. Al realizar una abstracción, buscamos pasar por alto detalles que no son necesarios para nosotros y mostrar únicamente lo que es relevante.
+This example encapsulates the essence of the abstraction concept. When performing abstraction, we seek to overlook details that are not necessary for us and display only what is relevant.
 
-Desde la perspectiva del desarrollo de software, podemos observar que mediante una clase podemos llevar a cabo una abstracción de una entidad del mundo real. Tomemos, por ejemplo, la clase "carro" que creamos. Esta tiene la capacidad de almacenar datos relacionados con la marca y el año de lanzamiento al mercado del carro. Sin embargo, ¿por qué solo estas dos informaciones? Un carro del mundo real tiene más propiedades, como el color y el modelo. No obstante, debemos cuestionarnos: ¿Son estas informaciones relevantes para nuestro software?
+From the perspective of software development, we can see that through a class, we can carry out an abstraction of an entity from the real world. Take, for example, the "Car" class we created. It has the ability to store data related to the brand and the year a car was released to the market. However, why only these two pieces of information? A real-world car has more properties, such as color and model. However, we must question: Are these pieces of information relevant to our software?
 
-Nuestra clase abstrae todo lo que representa un carro, seleccionando únicamente lo que nos interesa y descartando todo lo demás.
+Our class abstracts everything that represents a car, selecting only what interests us and discarding everything else.
 
-## Encapsulamiento
+Encapsulation:
+Now, we use classes to model entities relevant to your application, store data within objects, and execute functionalities. However, the question that arises is: Should anyone be able to directly modify this data? Should anyone execute any functionality of our objects at any time? Generally, this is not something we desire. We want to have control over how data is assigned, decide who can view the internal information of our objects, and perhaps regulate the execution of object functionalities. This is where the concept of encapsulation comes into play.
 
-Ahora, se usar clases para modelar entidades relevantes para tu aplicación, almacenar datos dentro de objetos y ejecutar funcionalidades. Sin embargo, la pregunta que surge es: ¿Debería cualquiera poder modificar directamente estos datos? ¿Debe cualquiera ejecutar cualquier funcionalidad de nuestros objetos en cualquier momento? Por lo general, esto no es algo que deseamos. Queremos tener control sobre la forma en que se asignan los datos, decidir quién puede ver la información interna de nuestros objetos y, tal vez, regular la ejecución de funcionalidades de los objetos. Aquí es donde entra en juego el concepto de encapsulamiento.
+Encapsulation allows us to control who can view and use the various internal modules of our system. In terms of classes, encapsulation defines access to the members of the class.
 
-El encapsulamiento nos permite controlar quién puede ver y utilizar los diversos módulos internos de nuestro sistema. En términos de clases, el encapsulamiento define el acceso a los miembros de la clase.
-
-En C#, podemos emplear modificadores de acceso para especificar el control de agentes externos sobre distintas partes de nuestro sistema, como clases, miembros de clases, interfaces, entre otros. Supongamos que tenemos una variable llamada "velocidad", la cual deseamos incluir en nuestra clase "Carro" para indicar la velocidad a la que se desplaza un vehículo en particular. Sin embargo, queremos que solo dentro de la clase se pueda ver y modificar el valor de esta variable. Esto se puede lograr mediante un campo o una propiedad. Optemos por hacerlo con una propiedad:
+In C#, we can use access modifiers to specify control over external agents on different parts of our system, such as classes, class members, interfaces, among others. Suppose we have a variable called "speed," which we want to include in our "Car" class to indicate the speed at which a particular vehicle is moving. However, we only want the value of this variable to be visible and modifiable within the class. This can be achieved using a field or a property. Let's choose to do it with a property:
 
 
-public class Carro
-
+>public class Car
 {
+public string Brand;
+public int YearReleasedToMarket { get; set; }
+private int Speed { get; set; }
 
-    public string Marca;
- 
-    public int AñoSalidaAlMercado { get; set; }
- 
-    private int Velocidad { get; set; }
- 
-    public void Acelerar()
+    public void Accelerate()
     {
-        Velocidad += 10;
+        Speed += 10;
+    }
+>}
+
+When we instantiate the "Car" class, we cannot access the value of the "Speed" property, nor can we alter it from outside. What we can do is use the "Accelerate" function to increase the speed value by 10 units. This is one of the advantages of encapsulation: it allows us to control how the internal data of our object will be altered.
+
+If we want external agents to see the value of the "Speed" property but not be able to freely alter that value, we can use the following syntax:
+
+>public int Speed { get; private set; }
+
+## Inheritance
+
+Code sharing is a crucial feature in any software project, as it allows saving work when making changes to the system and enables a single algorithm to process different classes of entities, among other advantages.
+
+There are various ways to share code, and one of them is through the use of inheritance. Inheritance establishes a special relationship between two classes: the base class and the derived class. In this relationship, the derived class gains the ability to use specific properties and functionalities of the base class, even having the possibility to override the functionality of the latter. The main idea is that the derived class "inherits" some of the characteristics of the base class.
+
+We can illustrate this with an example using the "Car" class. A car is considered a type of vehicle, and besides, we want to process other types of vehicles, such as a truck. Both the car and the truck share the concept of speed, and both have the ability to accelerate and reverse. However, when a truck reverses, it must emit a sound. Finally, a car must have the ability to turn on the radio. Let's proceed to model this:
+
+>public class Vehicle
+{
+public string Brand;
+public int YearReleasedToMarket { get; set; }
+public int Speed { get; private set; }
+
+    public void Accelerate()
+    {
+        Speed += 10;
     }
 
-}
-
-Cuando hagamos una instancia de la clase Carro, no podremos acceder al valor de la propiedad Velocidad, ni tampoco podemos alterarlo desde afuera. Lo que sí podemos hacer es utilizar la función acelerar para aumentar el valor de la velocidad en 10 unidades. Esta es una de las ventajas del encapsulamiento: Nos permite controlar la manera en que se va a alterar la data interna de nuestro objeto.
-
-Si quisiéramos que agentes externos puedan ver el valor la propiedad Velocidad, pero que no puedan alterar libremente dicho valor, podemos utilizar la siguiente sintaxis:
-
-public int Velocidad { get; private set; }
-
-## Herencia
-
-Compartir código es una característica crucial en cualquier proyecto de software, ya que permite ahorrar trabajo al realizar cambios en el sistema y posibilita que un solo algoritmo pueda procesar distintas clases de entidades, entre otras ventajas.
-
-Existen diversas formas de compartir código, y una de ellas es mediante el uso de herencia. La herencia establece una relación especial entre dos clases: la clase base y la clase derivada. En esta relación, la clase derivada adquiere la capacidad de utilizar propiedades y funcionalidades específicas de la clase base, incluso teniendo la posibilidad de sustituir la funcionalidad de esta última. La idea principal es que la clase derivada "hereda" algunas de las características de la clase base.
-
-Podemos ilustrar esto con un ejemplo utilizando la clase "Carro". Un carro se considera un tipo de vehículo, y además, deseamos procesar otros tipos de vehículos, como un camión. Tanto el carro como el camión comparten el concepto de velocidad, y ambos tienen la capacidad de acelerar y de retroceder. No obstante, cuando un camión retrocede, debe emitir un sonido. Finalmente, un carro debe tener la capacidad de encender la radio. A continuación, procedamos a modelar esto:
-
-
-public class Vehículo
-{
-
-    public string Marca;
- 
-    public int AñoSalidaAlMercado { get; set; }
- 
-    public int Velocidad { get; private set; }
- 
-    public void Acelerar()
+    public virtual void Reverse()
     {
-        Velocidad += 10;
+        Console.WriteLine("Going in reverse!");
     }
- 
-    public virtual void Reversa()
-    {
- 
-        Console.WriteLine("Voy de reversa!");
-    }
+>}
+public class Car : Vehicle
+{
+public void TurnOnRadio()
+{
+Console.WriteLine("Turning on the radio");
+}
+}
+public class Truck : Vehicle
+{
+public override void Reverse()
+{
+base.Reverse();
+Console.WriteLine("BEEP BEEP BEEP!");
+}
 }
 
-public class Carro: Vehículo
 
+We see that we have 3 classes: Vehicle, Car, and Truck. Both Car and Truck inherit from the Vehicle class. The inheritance relationship is represented in this way:
+
+>class Car: Vehicle
+
+With this syntax, we establish that "Car" is a derived class of "Vehicle."
+
+We observe that the "Accelerate" function is defined in the "Vehicle" class, allowing all derived classes to use this function. The same applies to fields and properties.
+
+Certainly, the "Car" and "Truck" classes can define their own members that are not directly related to the "Vehicle" class. For example, the "Car" class has the "TurnOnRadio" method, which only this class possesses.
+
+It is also possible to modify the functionality of the base class. To achieve this, in
+
+the base class, the method must be marked as "virtual." When overriding, i.e., changing or adding functionality, we can do so using "override," as shown in the "Truck" class. Within the "Reverse" method of the "Truck" class, we find the code "base.Reverse();," which is used to invoke the "Reverse" method of the base class.
+
+We can use the above code as follows:
+
+>Car myCar = new Car();
+
+>myCar.YearReleasedToMarket = 2018;
+myCar.Accelerate();
+Console.WriteLine(myCar.Speed);
+myCar.Reverse();
+Console.WriteLine("-------");
+
+>Truck myTruck = new Truck();
+myTruck.Accelerate();
+myTruck.YearReleasedToMarket = 2012;
+myTruck.Reverse();
+
+## Polymorphism
+
+When we began discussing inheritance, we said that inheritance "allows a single algorithm to process different classes of entities." The idea is that we can have a function that receives a parameter, such as a base class, and we can pass objects that are instances of classes derived from that base class to that method. The same applies if the method receives an interface as a parameter. We can pass any class that implements that interface to that method.
+
+Polymorphism means in many forms. In our case, we call it polymorphism when a method receives a parameter that encompasses various types.
+
+Let's look at an example of polymorphism where we pass the base class "Vehicle" to a method:
+
+
+>static void Repair(Vehicle vehicle)
 {
-
-public void EncenderRadio()
-
-{
-    Console.WriteLine("Encendiendo la radio");
+Console.WriteLine("Initiating repair");
+Console.WriteLine("Testing accelerator");
+Console.WriteLine($"Initial speed: {vehicle.Speed}");
+vehicle.Accelerate();
+Console.WriteLine($"Final speed: {vehicle.Speed}");
+Console.WriteLine("Testing reverse");
+vehicle.Reverse();
+Console.WriteLine("Done!");
 }
 
-}
+This method invokes the "Accelerate" and "Reverse" methods of the vehicle passed as a parameter. The advantage this offers is that we can generalize algorithms to work with different types. In this case, this method will work with any class that inherits from "Vehicle." In this sense, even if in the future we add the "Motorcycle" class, which inherits from "Vehicle," we can use this new class with the "Repair" method, and it will work perfectly. In this way, polymorphism is manifested, as the "Repair" method can work with various different types.
 
-public class Camión: Vehículo
+In the "Repair" method, we cannot use the "TurnOnRadio" method of the "Car" class since the "Vehicle" class does not implement that method. However, we could use the "is" operator to perform casting to "Car" in case the "Vehicle" is a car:
 
+>if (vehicle is Car myCar)
 {
-public override void Reversa()
-
-    {
-        base.Reversa();
-        Console.WriteLine("BEEP BEEP BEEP!");
-    }
+    myCar.TurnOnRadio();
 }
-
-Vemos que tenemos 3 clases: Vehículo, Carro y Camión. Carro y Camión heredan de la clase Vehículo. La relación de herencia se representa de esta manera:
-
-### class Carro: Vehículo
-
-Con esta sintaxis, establecemos que "Carro" es una clase derivada de "Vehículo".
-
-Observamos que la función "Acelerar" está definida en la clase "Vehículo", lo que permite que todas las clases derivadas puedan hacer uso de dicha función. Lo mismo ocurre con los campos y propiedades.
-
-Ciertamente, las clases "Carro" y "Camión" pueden definir sus propios miembros que no están directamente relacionados con la clase "Vehículo". Por ejemplo, la clase "Carro" tiene el método "EncenderRadio", el cual solo esta clase posee.
-
-Es posible también modificar la funcionalidad de la clase base. Para lograr esto, en la clase base, el método debe ser marcado como "virtual". Cuando se desea sobrescribir, es decir, cambiar o agregar funcionalidad, podemos hacerlo utilizando "override", como se muestra en la clase "Camión". Dentro del método "Reversa" de la clase "Camión", encontramos el código "base.Reversa();", el cual se utiliza para invocar el método "Reversa" de la clase base.
-
-Podemos utilizar el código anterior de la siguiente manera:
-
-> Carro miCarro = new Carro();
-
->miCarro.AñoSalidaAlMercado = 2018;
-
->miCarro.Acelerar();
-
->Console.WriteLine(miCarro.Velocidad);
-
->miCarro.Reversa();
-
->Console.WriteLine("-------");
-
->Camión miCamion = new Camión();
-
->miCamion.Acelerar();
-
->miCamion.AñoSalidaAlMercado = 2012;
-
->miCamion.Reversa();
-
-## Polimorfismo
-
-Cuando empezamos a hablar de herencia, dijimos que la herencia “permite que un solo algoritmo pueda procesar distintas clases de entidades”. La idea es que podemos tener una función la cual reciba un parámetro, como una clase base, y podemos pasarle a ese método objetos que sean instancias de las clases derivadas de dicha clase base. Lo mismo ocurre si el método recibe como parámetro una interfaz. Podemos pasarle a dicho método cualquier clase que implemente dicha interfaz.
-
-Polimorfismo significa de muchas formas. En nuestro caso llamamos polimorfismo cuando un método recibe un parámetro que abarca varios tipos.
-
-Veamos un ejemplo de polimorfismo donde pasamos a un método la clase base Vehículo:
-
-////
-
-static void Reparar(Vehículo vehículo)
-
-{
-
-    Console.WriteLine("Iniciando reparación");
- 
-    Console.WriteLine("Probando acelerador");
- 
-    Console.WriteLine($"Velocidad inicial {vehículo.Velocidad}");
- 
-    vehículo.Acelerar();
- 
-    Console.WriteLine($"Velocidad final {vehículo.Velocidad}");
- 
-    Console.WriteLine("Probando reversa");
- 
-    vehículo.Reversa();
- 
-    Console.WriteLine("Listo!");
-
-}
-
-Este método invoca los métodos "Acelerar" y "Reversa" del vehículo que se le envíe como parámetro. La ventaja que esto ofrece es que podemos generalizar algoritmos para que funcionen con distintos tipos. En este caso, este método va a funcionar con cualquier clase que herede de "Vehículo". En tal sentido, incluso si en el futuro agregamos la clase "Motocicleta", la cual hereda de "Vehículo", podemos utilizar esta nueva clase con el método "Reparar", y va a funcionar perfectamente. De esta manera, se manifiesta el polimorfismo, ya que el método "Reparar" puede trabajar con varios tipos distintos.
-
-En el método "Reparar", no podemos hacer uso del método "EncenderRadio" de la clase "Carro", ya que la clase "Vehículo" no implementa dicho método. No obstante, podríamos emplear el operador "is" para realizar un casting a "Carro" en caso de que el "Vehículo" sea un carro:
-
-if (vehículo is Carro miCarro)
-
-{
 
     miCarro.EncenderRadio();
 
-}
+>}
 
-Esta sintaxis es una manera resumida de decir:
+This syntax is a shorthand way of saying:
 
-if (vehículo is Carro)
-
+>if (vehicle is Car)
 {
-
-    Carro miCarro = vehículo as Carro;
- 
-    miCarro.EncenderRadio();
-
+    Car myCar = (Car)vehicle;
+    myCar.TurnOnRadio();
 }
