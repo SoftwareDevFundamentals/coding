@@ -1,6 +1,6 @@
-package bo.usfx.brayanpoloTests.assignment_03Test;
+package bo.usfx.brayanpoloTests;
 
-import bo.usfx.brayanpolo.assignment_03.TotalPoints;
+import bo.usfx.brayanpolo.TotalPoints;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
