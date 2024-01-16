@@ -1,35 +1,32 @@
-# Los Cuatro Pilares de la Programación Orientada a Objetos
-![Pilares de la OOP](https://www.crio.do/blog/content/images/2022/02/Four-pillars-of-Object-Oriented-Programming.png)
+# The Four Pillars of Object-Oriented Programming
+![Pillars of OOP](https://www.crio.do/blog/content/images/2022/02/Four-pillars-of-Object-Oriented-Programming.png)
 
-La Programación Orientada a Objetos (OOP) es un paradigma de programación basado en el concepto de `objetos`, que pueden contener datos en forma de campos (a menudo conocidos como atributos o propiedades) y código en forma de procedimientos (conocidos como métodos).
+Object-Oriented Programming (OOP) is a programming paradigm based on the concept of `objects`, which can contain data in the form of fields (often known as attributes or properties) and code in the form of procedures (known as methods).
 
-## Índice
-- [Encapsulamiento](#encapsulamiento)
-- [Abstracción](#abstracción)
-- [Herencia](#herencia)
-- [Polimorfismo](#polimorfismo)
-- [Referencias](#referencias)
+## Index
+- [Encapsulation](#encapsulation)
+- [Abstraction](#abstraction)
+- [Inheritance](#inheritance)
+- [Polymorphism](#polymorphism)
+- [References](#references)
 
-# Encapsulamiento
-![Encapsulamiento](https://www.crio.do/blog/content/images/2022/01/What-is-Encapsulation.png)
-El Encapsulamiento es uno de los cuatro pilares fundamentales de la Programación Orientada a Objetos (OOP). Actúa como un escudo protector alrededor de las variables de instancia, evitando que se modifiquen o establezcan valores inapropiados.
+# Encapsulation
+![Encapsulation](https://www.crio.do/blog/content/images/2022/01/What-is-Encapsulation.png)
+Encapsulation is one of the four fundamental pillars of Object-Oriented Programming (OOP). It acts as a protective shield around instance variables, preventing them from being modified or set to inappropriate values.
 
-## Modificadores de Acceso
+## Access Modifiers
 
-Para comprender en profundidad el Encapsulamiento, uno debe estar familiarizado con los modificadores de acceso en Java. Las clases, atributos, métodos y objetos son principalmente utilizados para escribir programas. En Java, hay principalmente cuatro niveles de visibilidad:
+To deeply understand Encapsulation, one must be familiar with access modifiers in Java. Classes, attributes, methods, and objects are primarily used to write programs. In Java, there are mainly four levels of visibility:
 
-Para comprender en profundidad el Encapsulamiento, uno debe estar familiarizado con los modificadores de acceso en Java. Las `clases`, `atributos`, `métodos` y `objetos` son principalmente utilizados para escribir programas. En Java, existen cuatro niveles de visibilidad:
+| Modifier     | Description |
+|--------------|-------------|
+| `public`     | Visible to any other class everywhere. |
+| `private`    | Visible only within the class that defines it. |
+| `protected`  | Visible to the class that defines it and its subclasses. |
+| `package`    | Visible only within its own package. |
 
-| Modificador | Descripción |
-|-------------|-------------|
-| `public`    | Visible para cualquier otra clase en todas partes. |
-| `private`   | Visible solo dentro de la clase que lo define. |
-| `protected` | Visible para la clase que lo define y sus subclases. |
-| `package`   | Visible solo dentro de su propio paquete. |
-
-### Ejemplo de Encapsulamiento
+### Example of Encapsulation
 `Polygon.java`
-
 ```java
 package polygon;
 public class Polygon {
@@ -53,121 +50,116 @@ import polygon.Polygon;
 class Hexagon extends Polygon {
     public static void main(String args[]) {
         Hexagon h = new Hexagon();
-        h.edges = 6; // Compila porque edges está declarado como protected
-        h.poly_name = "hexagon"; // Error de compilación ya que las variables privadas no pueden ser accedidas por subclases
-        h.printEdges(); // Error de compilación ya que este método tiene acceso predeterminado (paquete)
-        h.printInfo(); // Compila ya que este método es público
+        h.edges = 6; // Compiles because edges is declared as protected
+        h.poly_name = "hexagon"; // Compilation error since private variables cannot be accessed by subclasses
+        h.printEdges(); // Compilation error since this method has default access (package)
+        h.printInfo(); // Compiles as this method is public
     }
 }
 ```
 
-# Abstracción
-La abstracción es una técnica para identificar la información útil que debe ser visible para un usuario e ignorar los detalles irrelevantes.
-Por ejemplo, se puede pensar en el sistema operativo Linux como una clase a partir de la cual se crean sabores (objetos) de Linux.
-![Abstracción](https://www.crio.do/blog/content/images/2022/02/Linux-OS-1.png)
+# Abstraction
+Abstraction is a technique to identify useful information that should be visible to a user and to ignore irrelevant details.
+For example, one can think of the Linux operating system as a class from which flavors (objects) of Linux are created.
+![Abstraction](https://www.crio.do/blog/content/images/2022/02/Linux-OS-1.png)
 
-## Conceptos de Abstracción
+## Abstraction Concepts
 
-La abstracción utiliza clases abstractas e interfaces para implementar la abstracción. Una `clase abstracta` puede contener métodos abstractos que no tienen implementación y se destinan a ser sobrescritos en clases derivadas.
+Abstraction uses abstract classes and interfaces to implement abstraction. An `abstract class` may contain abstract methods that have no implementation and are intended to be overridden in derived classes.
 
-| Elemento        | Uso en Abstracción                |
-|-----------------|------------------------------------|
-| Clase Abstracta | Para declarar la estructura común. |
-| Método Abstracto| Para obligar a las subclases a implementar comportamientos específicos. |
+| Element        | Use in Abstraction                |
+|----------------|-----------------------------------|
+| Abstract Class | To declare common structure.      |
+| Abstract Method| To compel subclasses to implement specific behaviors. |
 
-### Ejemplo de Abstracción
-`Vehiculo.java`
-
+### Example of Abstraction
+`Vehicle.java`
 ```java
-package transporte;
+package transportation;
 
-public abstract class Vehiculo {
-    private String marca;
+public abstract class Vehicle {
+    private String brand;
 
-    public abstract void encenderMotor();
-    // Otros métodos relacionados con vehículos
+    public abstract void startEngine();
+    // Other vehicle-related methods
 }
 ```
-`Coche.java`
+`Car.java`
 ```java
-package transporte;
+package transportation;
 
-public class Coche extends Vehiculo {
+public abstract class Vehicle {
+    private String brand;
 
-    @Override
-    public void encenderMotor() {
-        // Implementación específica para Coche
-    }
-    // Otros métodos específicos del coche
+    public abstract void startEngine();
+    // Other vehicle-related methods
 }
 ```
 
-# Herencia 
+# Inheritance
 
-En Java, es posible heredar atributos y métodos de una clase a otra. Agrupamos el concepto de "herencia" en dos categorías:
-- **Subclase (Hijo)**: la clase que hereda de otra clase.
-- **Superclase (Padre)**: la clase de la cual se hereda.
+In Java, it is possible to inherit attributes and methods from one class to another. We categorize the concept of "inheritance" into two groups:
+- **Subclass (Child)**: the class that inherits from another class.
+- **Superclass (Parent)**: the class from which it inherits.
 
-Para heredar de una clase, se utiliza la palabra clave `extends`.
+To inherit from a class, the keyword `extends` is used.
 
-### Ejemplo de Herencia
+### Example of Inheritance
 
-En el siguiente ejemplo, la clase `Car` (subclase) hereda los atributos y métodos de la clase `Vehicle` (superclase):
+In the following example, the `Car` class (subclass) inherits the attributes and methods of the `Vehicle` class (superclass):
 
-### Código de Ejemplo
-
+### Example Code
 ```java
 class Vehicle {
-  protected String brand = "Ford";        // Atributo de Vehicle
-  public void honk() {                    // Método de Vehicle
-    System.out.println("Tuut, tuut!");
-  }
+    protected String brand = "Ford";        // Vehicle attribute
+    public void honk() {                    // Vehicle method
+        System.out.println("Tuut, tuut!");
+    }
 }
 
 class Car extends Vehicle {
-  private String modelName = "Mustang";    // Atributo de Car
-  public static void main(String[] args) {
+    private String modelName = "Mustang";    // Car attribute
+    public static void main(String[] args) {
 
-    // Crear un objeto myCar
-    Car myCar = new Car();
+        // Create a myCar object
+        Car myCar = new Car();
 
-    // Llamar al método honk() (de la clase Vehicle) en el objeto myCar
-    myCar.honk();
+        // Call the honk() method (from the Vehicle class) on the myCar object
+        myCar.honk();
 
-    // Mostrar el valor del atributo brand (de la clase Vehicle) y el valor del modelName de la clase Car
-    System.out.println(myCar.brand + " " + myCar.modelName);
-  }
+        // Display the value of the brand attribute (from the Vehicle class) and the modelName from the Car class
+        System.out.println(myCar.brand + " " + myCar.modelName);
+    }
 }
 ```
-### Explicación del Código
+### Code Explanation
 
-- La clase `Vehicle` contiene un atributo `brand` y un método `honk()`.
-- La clase `Car` extiende `Vehicle`, lo que significa que hereda sus atributos y métodos.
-- Dentro de `Car`, declaramos un atributo adicional llamado `modelName`.
-- En el método `main`, creamos un objeto de `Car`, llamamos al método `honk()` heredado y accedemos a los atributos `brand` y `modelName`.
+- The `Vehicle` class contains a `brand` attribute and a `honk()` method.
+- The `Car` class extends `Vehicle`, which means it inherits its attributes and methods.
+- Inside `Car`, we declare an additional attribute called `modelName`.
+- In the `main` method, we create a `Car` object, call the inherited `honk()` method, and access the `brand` and `modelName` attributes.
 
-Este ejemplo demuestra cómo la herencia permite la reutilización de código y la relación jerárquica entre clases en Java.
+This example demonstrates how inheritance allows for code reuse and the hierarchical relationship between classes in Java.
 
+# Polymorphism
 
-# Polimorfismo 
+Polymorphism, a fundamental concept in Java programming, is akin to a Swiss Army knife, offering multiple functionalities within a single entity. It's like a chameleon, adapting its behavior based on the context. This concept is crucial for code flexibility and maintenance.
 
-El polimorfismo, un concepto fundamental en la programación Java, se asemeja a una navaja suiza, ofreciendo múltiples funcionalidades dentro de una sola entidad. Es como un camaleón, adaptando su comportamiento en base al contexto. Este concepto es crucial para la flexibilidad y el mantenimiento del código.
+- **Definition:** Polymorphism in Java allows objects to be treated as instances of their parent class, enabling them to take on multiple forms.
+- **Analogy:** Comparable to a Swiss Army knife, polymorphism enables a Java object to exhibit different behaviors in different contexts.
 
-- **Definición:** El polimorfismo en Java permite que los objetos sean tratados como instancias de su clase padre, lo que les permite asumir múltiples formas.
-- **Analogía:** Comparable a una navaja suiza, el polimorfismo permite que un objeto Java exhiba diferentes comportamientos en diferentes contextos.
+### Importance of Polymorphism in Java
+- Enhances code flexibility and reusability.
+- Facilitates code maintenance and understanding.
+- Crucial for implementing inheritance and interfaces.
 
-### Importancia del Polimorfismo en Java
-- Mejora la flexibilidad y reutilización del código.
-- Facilita el mantenimiento y comprensión del código.
-- Crucial para la implementación de herencia e interfaces.
+### Types of Polymorphism in Java
+- **Compile-time Polymorphism:** Achieved through method overloading (same method name, different parameters).
+- **Runtime Polymorphism:** Achieved through method overriding (the subclass provides its own method implementation).
 
-### Tipos de Polimorfismo en Java
-- **Polimorfismo en Tiempo de Compilación:** Logrado a través de la sobrecarga de métodos (mismo nombre de método, diferentes parámetros).
-- **Polimorfismo en Tiempo de Ejecución:** Logrado a través de la sobreescritura de métodos (la subclase proporciona su propia implementación del método).
-
-### Código de Ejemplo
-- Superclase: `Animal` con un método `makeSound()`.
-- Subclases: `Dog` y `Cat`, cada una sobrescribe `makeSound()`.
+### Example Code
+- Superclass: `Animal` with a `makeSound()` method.
+- Subclasses: `Dog` and `Cat`, each overriding `makeSound()`.
 
 ```java
 public class Animal {
@@ -200,8 +192,9 @@ public class Main {
   }
 }
 ```
-# Referencias
-- Encapsulamiento: [Documentación](https://www.crio.do/blog/encapsulation-in-java/)
-- Abstracción: [Documentación](https://www.crio.do/blog/abstraction-in-java/?utm_source=blog-int)
-- Herencia: [Documentación](https://www.w3schools.com/java/java_inheritance.asp)
-- Polimorfismo: [Documentación](https://www.shiksha.com/online-courses/articles/polymorphism-in-java/)
+
+# References
+- Encapsulation: [Documentation](https://www.crio.do/blog/encapsulation-in-java/)
+- Abstraction: [Documentation](https://www.crio.do/blog/abstraction-in-java/?utm_source=blog-int)
+- Inheritance: [Documentation](https://www.w3schools.com/java/java_inheritance.asp)
+- Polymorphism: [Documentation](https://www.shiksha.com/online-courses/articles/polymorphism-in-java/)
