@@ -9,13 +9,21 @@ These foundations are: abstraction, encapsulation, inheritance, and polymorphism
 Note: For reference, I include here the class we created in the previous entry:
 
 
->public class Car
-{
-public string Brand;
-public int YearReleasedToMarket { get; set; }
-    public void Accelerate()
-    {
+>public class Car {
 
+>public String brand;
+private int yearReleasedToMarket;
+
+    public int getYearReleasedToMarket() {
+        return yearReleasedToMarket;
+    }
+
+    public void setYearReleasedToMarket(int yearReleasedToMarket) {
+        this.yearReleasedToMarket = yearReleasedToMarket;
+    }
+
+    public void accelerate() {
+        // Implementa la lógica de aceleración aquí
     }
 >}
 
@@ -65,13 +73,32 @@ These foundations are: abstraction, encapsulation, inheritance, and polymorphism
 Note: For reference, I include here the class we created in the previous entry:
 
 
->public class Car
-{
-public string Brand;
-public int YearReleasedToMarket { get; set; }
+>public class Car {
 
-    public void Accelerate()
-    {
+>public String brand;
+
+>private int yearReleasedToMarket;
+
+>private int speed;
+
+    public int getYearReleasedToMarket() {
+        return yearReleasedToMarket;
+    }
+
+    public void setYearReleasedToMarket(int yearReleasedToMarket) {
+        this.yearReleasedToMarket = yearReleasedToMarket;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public void accelerate() {
+        speed += 10;
     }
 >}
 
@@ -91,18 +118,41 @@ Now, we use classes to model entities relevant to your application, store data w
 
 Encapsulation allows us to control who can view and use the various internal modules of our system. In terms of classes, encapsulation defines access to the members of the class.
 
-In C#, we can use access modifiers to specify control over external agents on different parts of our system, such as classes, class members, interfaces, among others. Suppose we have a variable called "speed," which we want to include in our "Car" class to indicate the speed at which a particular vehicle is moving. However, we only want the value of this variable to be visible and modifiable within the class. This can be achieved using a field or a property. Let's choose to do it with a property:
 
+>public class Car {
 
->public class Car
-{
-public string Brand;
-public int YearReleasedToMarket { get; set; }
-private int Speed { get; set; }
+>private String brand;
 
-    public void Accelerate()
-    {
-        Speed += 10;
+>private int yearReleasedToMarket;
+
+>private int speed;
+
+    public String getBrand() {
+        return brand;
+    }
+
+    public void setBrand(String brand) {
+        this.brand = brand;
+    }
+
+    public int getYearReleasedToMarket() {
+        return yearReleasedToMarket;
+    }
+
+    public void setYearReleasedToMarket(int yearReleasedToMarket) {
+        this.yearReleasedToMarket = yearReleasedToMarket;
+    }
+
+    private int getSpeed() {
+        return speed;
+    }
+
+    private void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public void accelerate() {
+        setSpeed(getSpeed() + 10);
     }
 >}
 
@@ -110,7 +160,9 @@ When we instantiate the "Car" class, we cannot access the value of the "Speed" p
 
 If we want external agents to see the value of the "Speed" property but not be able to freely alter that value, we can use the following syntax:
 
->public int Speed { get; private set; }
+>private void setSpeed(int speed) {
+this.speed = speed;
+}
 
 ## Inheritance
 
@@ -120,42 +172,61 @@ There are various ways to share code, and one of them is through the use of inhe
 
 We can illustrate this with an example using the "Car" class. A car is considered a type of vehicle, and besides, we want to process other types of vehicles, such as a truck. Both the car and the truck share the concept of speed, and both have the ability to accelerate and reverse. However, when a truck reverses, it must emit a sound. Finally, a car must have the ability to turn on the radio. Let's proceed to model this:
 
->public class Vehicle
-{
-public string Brand;
-public int YearReleasedToMarket { get; set; }
-public int Speed { get; private set; }
+>public class Vehicle {
 
-    public void Accelerate()
-    {
-        Speed += 10;
+>public String brand;
+
+>private int yearReleasedToMarket;
+
+>private int speed;
+
+    public int getYearReleasedToMarket() {
+        return yearReleasedToMarket;
     }
 
-    public virtual void Reverse()
-    {
-        Console.WriteLine("Going in reverse!");
+    public void setYearReleasedToMarket(int yearReleasedToMarket) {
+        this.yearReleasedToMarket = yearReleasedToMarket;
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    private void setSpeed(int speed) {
+        this.speed = speed;
+    }
+
+    public void accelerate() {
+        setSpeed(getSpeed() + 10);
+    }
+
+    public void reverse() {
+        System.out.println("Going in reverse!");
     }
 >}
-public class Car : Vehicle
-{
-public void TurnOnRadio()
-{
-Console.WriteLine("Turning on the radio");
+
+>public class Car extends Vehicle {
+
+>public void turnOnRadio() {
+System.out.println("Turning on the radio");
 }
-}
-public class Truck : Vehicle
-{
-public override void Reverse()
-{
-base.Reverse();
-Console.WriteLine("BEEP BEEP BEEP!");
-}
+
+>}
+
+>public class Truck extends Vehicle {
+
+>@Override
+public void reverse() {
+super.reverse();
+System.out.println("BEEP BEEP BEEP!");
+
+>}
 }
 
 
 We see that we have 3 classes: Vehicle, Car, and Truck. Both Car and Truck inherit from the Vehicle class. The inheritance relationship is represented in this way:
 
->class Car: Vehicle
+>public class Car extends Vehicle
 
 With this syntax, we establish that "Car" is a derived class of "Vehicle."
 
@@ -169,18 +240,24 @@ the base class, the method must be marked as "virtual." When overriding, i.e., c
 
 We can use the above code as follows:
 
+>public class Main {
+
+>public static void main(String[] args) {
+
 >Car myCar = new Car();
 
->myCar.YearReleasedToMarket = 2018;
-myCar.Accelerate();
-Console.WriteLine(myCar.Speed);
-myCar.Reverse();
-Console.WriteLine("-------");
+        myCar.setYearReleasedToMarket(2018);
+        myCar.accelerate();
+        System.out.println(myCar.getSpeed());
+        myCar.reverse();
+        System.out.println("-------");
 
->Truck myTruck = new Truck();
-myTruck.Accelerate();
-myTruck.YearReleasedToMarket = 2012;
-myTruck.Reverse();
+        Truck myTruck = new Truck();
+        myTruck.accelerate();
+        myTruck.setYearReleasedToMarket(2012);
+        myTruck.reverse();
+    }
+>}
 
 ## Polymorphism
 
@@ -191,35 +268,35 @@ Polymorphism means in many forms. In our case, we call it polymorphism when a me
 Let's look at an example of polymorphism where we pass the base class "Vehicle" to a method:
 
 
->static void Repair(Vehicle vehicle)
-{
-Console.WriteLine("Initiating repair");
-Console.WriteLine("Testing accelerator");
-Console.WriteLine($"Initial speed: {vehicle.Speed}");
-vehicle.Accelerate();
-Console.WriteLine($"Final speed: {vehicle.Speed}");
-Console.WriteLine("Testing reverse");
-vehicle.Reverse();
-Console.WriteLine("Done!");
-}
+>public static void repair(Vehicle vehicle) 
+
+>{
+System.out.println("Initiating repair");
+System.out.println("Testing accelerator");
+System.out.println("Initial speed: " + vehicle.getSpeed());
+vehicle.accelerate();
+System.out.println("Final speed: " + vehicle.getSpeed());
+System.out.println("Testing reverse");
+vehicle.reverse();
+System.out.println("Done!");
+
+>}
 
 This method invokes the "Accelerate" and "Reverse" methods of the vehicle passed as a parameter. The advantage this offers is that we can generalize algorithms to work with different types. In this case, this method will work with any class that inherits from "Vehicle." In this sense, even if in the future we add the "Motorcycle" class, which inherits from "Vehicle," we can use this new class with the "Repair" method, and it will work perfectly. In this way, polymorphism is manifested, as the "Repair" method can work with various different types.
 
 In the "Repair" method, we cannot use the "TurnOnRadio" method of the "Car" class since the "Vehicle" class does not implement that method. However, we could use the "is" operator to perform casting to "Car" in case the "Vehicle" is a car:
 
->if (vehicle is Car myCar)
+>if (vehicle instanceof Car)
 {
-    myCar.TurnOnRadio();
+Car myCar = (Car) vehicle;
+myCar.turnOnRadio();
 }
 
-    miCarro.EncenderRadio();
-
->}
 
 This syntax is a shorthand way of saying:
 
->if (vehicle is Car)
+>if (vehicle instanceof Car) 
 {
-    Car myCar = (Car)vehicle;
-    myCar.TurnOnRadio();
+Car myCar = (Car) vehicle;
+myCar.turnOnRadio();
 }
