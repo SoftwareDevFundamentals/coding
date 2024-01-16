@@ -1,4 +1,4 @@
-package bo.usfx.brayanpolo.assignment_04;
+package bo.usfx.brayanpolo;
 
 public final class Solution {
     private Solution() {

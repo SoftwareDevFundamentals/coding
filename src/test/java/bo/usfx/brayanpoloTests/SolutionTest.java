@@ -1,6 +1,6 @@
-package bo.usfx.brayanpoloTests.assignment_04Test;
+package bo.usfx.brayanpoloTests;
 
-import bo.usfx.brayanpolo.assignment_04.Solution;
+import bo.usfx.brayanpolo.Solution;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 public class SolutionTest {

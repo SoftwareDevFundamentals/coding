@@ -1,6 +1,6 @@
-package bo.usfx.brayanpoloTests.assignment_03Test;
+package bo.usfx.brayanpoloTests;
 //importamos la clase
-import bo.usfx.brayanpolo.assignment_03.CollatzConjecture;
+import bo.usfx.brayanpolo.CollatzConjecture;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;

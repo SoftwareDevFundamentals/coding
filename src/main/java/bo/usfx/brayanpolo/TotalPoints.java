@@ -1,4 +1,4 @@
-package bo.usfx.brayanpolo.assignment_03;
+package bo.usfx.brayanpolo;
 public final class TotalPoints {
      private TotalPoints() {
 
